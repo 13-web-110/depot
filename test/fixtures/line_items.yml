@@ -1,5 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
+# test travis
 one:
   product_id: 1
   cart_id: 1
