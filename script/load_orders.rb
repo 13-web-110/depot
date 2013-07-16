@@ -6,13 +6,9 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
-class LineItem < ActiveRecord::Base
-  belongs_to :order
-  belongs_to :product
-  belongs_to :cart
-  attr_accessible :cart_id, :product_id
-
-  def total_price
-    product.price * quantity
+Order.transaction do
+  (1..100).each do |i|
+    Order.create(name: "Customer #{i}", address: "#{i} Main Street",
+      email: "customer-#{i}@example.com", pay_type: "Check")
   end
 end

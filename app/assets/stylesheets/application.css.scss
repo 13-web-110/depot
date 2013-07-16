@@ -88,40 +88,38 @@
   }
 //#END:side
 }
-#notice {
-  color: #000 !important;
-  border: 2px solid red;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
-}
 
-#columns {
-  background: #141;
-
-  #main {
-    margin-left: 17em;
-    padding: 1em;
-    background: white;
+//#START:form
+.depot_form {
+  fieldset {
+    background: #efe;
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
   }
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
 
-  #side {
-    float: left;
-    padding: 1em 2em;
-    width: 13em;
-    background: #141;
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
 
-    ul {
-      padding: 0;
-      li {
-        list-style: none;
-        a {
-          color: #bfb;
-          font-size: small;
-        }
-      }
+    .submit {
+      margin-left: 4em;
+    }
+    br {
+      display: none
     }
   }
 }
-/* END_HIGHLIGHT */
+//#END:form
