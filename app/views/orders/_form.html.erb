@@ -2,43 +2,44 @@
 <%= form_for(@order) do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %>
-      prohibited this order from being saved:</h2>
+      <h2><%=raw t('errors.template.header',count: @order.errors.count, model: t('activerecord.models.body')) %>.</h2>
+      <p><%= t('errors.template.body')%></p>
+
       <ul>
       <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li><%=raw msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name,t('.name') %><br />
 <!-- START_HIGHLIGHT -->
     <%= f.text_field :name, size: 40 %>
 <!-- END_HIGHLIGHT -->
   </div>
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label :address,t('.address_html') %><br />
 <!-- START_HIGHLIGHT -->
     <%= f.text_area :address, rows: 3, cols: 40 %>
 <!-- END_HIGHLIGHT -->
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email,t('.email') %><br />
 <!-- START_HIGHLIGHT -->
     <%= f.email_field :email, size: 40 %>
 <!-- END_HIGHLIGHT -->
   </div>
   <div class="field">
-    <%= f.label :pay_type %><br />
+    <%= f.label :pay_type, t('.pay_type') %><br />
 <!-- START_HIGHLIGHT -->
     <%= f.select :pay_type, Order::PAYMENT_TYPES,
-                  prompt: 'Select a payment method' %>
+                  prompt: t('.pay_prompt_html')  %>
 <!-- END_HIGHLIGHT -->
   </div>
   <div class="actions">
 <!-- START_HIGHLIGHT -->
-    <%= f.submit 'Place Order' %>
+    <%= f.submit  t('.submit') %>
 <!-- END_HIGHLIGHT -->
   </div>
 <% end %>

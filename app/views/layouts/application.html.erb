@@ -9,8 +9,15 @@
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
   <div id="banner">
+    <%= form_tag store_path,method: :get,class: 'locale' do %>
+      <%= select_tag 'set_locale', 
+        options_for_select(LANGUAGES, I18n.locale.to_s),
+        onchange: 'this.form.submit()' %>
+      <%= javascript_tag "$('.locale input').hide()" %>
+    <% end %>
+
     <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %>
+    <%= @page_title || t('.title') %>
   </div>
   <div id="columns">
     <div id="side">
@@ -23,10 +30,10 @@
     <!-- END:hidden_div -->
 
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><%= link_to t('.home'),store_path %></li>
+        <li><a href=""><%= t('.questions') %></a></li>
+        <li><a href=""><%= t('.news') %></a></li>
+        <li><a href=""><%= t('.contact') %></a></li>
       </ul>
 <!-- START_HIGHLIGHT -->
 
