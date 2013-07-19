@@ -21,13 +21,13 @@
   </div>
   <div id="columns">
     <div id="side">
-      <!-- START:hidden_div -->
+
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
           <%= render @cart %>
         <% end %>
       <% end %>
-    <!-- END:hidden_div -->
+
 
       <ul>
         <li><%= link_to t('.home'),store_path %></li>
@@ -35,7 +35,7 @@
         <li><a href=""><%= t('.news') %></a></li>
         <li><a href=""><%= t('.contact') %></a></li>
       </ul>
-<!-- START_HIGHLIGHT -->
+
 
       <% if session[:user_id] %>
         <ul>
@@ -45,7 +45,7 @@
         </ul>
         <%= button_to 'Logout', logout_path, method: :delete   %>
       <% end %>
-<!-- END_HIGHLIGHT -->
+
     </div>
     <div id="main">
       <%= yield %>
