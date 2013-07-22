@@ -1,5 +1,6 @@
 #encoding: utf-8
 I18n.default_locale = :en
+#cherish
 
 LANGUAGES = [
 	['English','en'],
