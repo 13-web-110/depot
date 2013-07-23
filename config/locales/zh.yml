@@ -25,6 +25,7 @@ zh:
         delimiter: ","
         format:    "%n&nbsp;%u"
 #END:currency
+#cherish
 
 #START:model
 #START:errors
