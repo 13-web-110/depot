@@ -61,6 +61,8 @@ zh:
       questions:   "问题"
       news:        "新闻"
       contact:     "联系我"
+      sing_up:     "注册"
+      sing_in:     "登录"
 #END:layout
 
 #START:cart
@@ -77,6 +79,7 @@ zh:
     index:
       title_html:  "书籍目录"
       add_html:    "加入购物车"
+      comment:     "评论"
 #END:main
 
 #START:checkout
@@ -91,7 +94,9 @@ zh:
       pay_prompt_html: "选择一个支付方式"
       submit:       "支付"
 #END:checkout
-
+  products:
+      show:
+        add_html:    "Add to Cart"
 #START:flash
   thanks:          "感谢您提交的订单"
 #END:flash

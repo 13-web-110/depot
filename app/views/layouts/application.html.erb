@@ -30,9 +30,9 @@
 
       <ul>
         <li><%= link_to t('.home'),store_path %></li>
-        <li><a href=""><%= t('.questions') %></a></li>
-        <li><a href=""><%= t('.news') %></a></li>
-        <li><a href=""><%= t('.contact') %></a></li>
+        <li><%= link_to t('.question'),store_path %></li>
+        <li><%= link_to t('.news'),store_path %></li>
+        <li><%= link_to t('.contact'),store_path %></li>
       </ul>
 
 
@@ -44,8 +44,12 @@
         </ul>
         <%= button_to 'Logout', logout_path, method: :delete   %>
       <% end %>
-      
-      <%= link_to 'Registe', new_user_path %>
+      <% unless session[:user_id] %>
+      <ul>
+      	<li> <%= link_to t('.sing_in') , login_url %></li>
+      	<li> <%= link_to t('.sing_up') , new_user_path %></li>
+      </ul>
+      <% end %>
 
     </div>
     <div id="main">

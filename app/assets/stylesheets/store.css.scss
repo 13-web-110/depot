@@ -44,12 +44,21 @@
       }
 
     }
+    .comment{
+      a{
+          color: #44a;
+          font-weight: bold;
+      }
 
+    }
 
     .price {
       color: #44a;
       font-weight: bold;
       margin-right: 3em;
+    }
+    .add_cart {
+      margin-left: 3em;
     }
   }
 }
