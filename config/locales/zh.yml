@@ -8,7 +8,7 @@
 #START:model
 #START:flash
 zh:
-
+#  start
 #END:cart
 #END:flash
 #END:model
@@ -25,6 +25,7 @@ zh:
         delimiter: ","
         format:    "%n&nbsp;%u"
 #END:currency
+#cherish
 
 #START:model
 #START:errors
