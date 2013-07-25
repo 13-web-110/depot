@@ -1,15 +1,16 @@
-<p>
-  <b>Commenter:</b>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <b>Comment:</b>
-  <%= comment.body %>
-</p>
+<div class="comment">
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.product, comment],
+  <%= comment.body %>
+  <br/>
+  <span class="page_foot">
+ <span class="commenter "> <i> -- <%= comment.commenter %></i> </span>
+<span class="del">
+<%= link_to 'del', [comment.product, comment],
                :confirm => 'Are you sure?',
                :method => :delete %>
-</p>
+</span>
+</span>
+  <br />
+    <br />
+</div>
+

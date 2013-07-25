@@ -1,11 +1,11 @@
 
 <div class="depot_form">
-  <% if flash[:alert] %>
-    <p id="notice"><%= flash[:alert] %></p>
+  <% if flash[:notice] %>
+    <p id="notice"><%= flash[:notice] %></p>
   <% end %>
   <%= form_tag do %>
     <fieldset>
-      <legend>Please Log In</legend>
+      <legend>Please Log In!</legend>
 
       <div>
         <%= label_tag :name, 'Name:' %>

@@ -13,7 +13,7 @@
     <div class="price_line">
       <span class="price"><%= number_to_currency(product.price) %></span>
 
-      <span class="comment"><%= link_to t('.comment') , product %></span>
+      <span class="comment"><%= link_to t('.comment') +  "  (" + product.comments.count.to_s + ")"  , product %></span>
       
       <span class="add_cart"><%= button_to t('.add_html'), line_items_path(product_id: product), remote:true %></span>
     </div>
