@@ -1,0 +1,16 @@
+<div class="comment">
+
+  <%= comment.body %>
+  <br/>
+  <span class="page_foot">
+ <span class="commenter "> <i> -- <%= comment.commenter %></i> </span>
+<span class="del">
+<%= link_to 'del', [comment.product, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</span>
+</span>
+  <br />
+    <br />
+</div>
+
