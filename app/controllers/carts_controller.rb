@@ -80,7 +80,8 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-    @cart = current_cart
+    # @cart = current_cart
+    @cart = Cart.find(params[:id])
     @cart.destroy
     session[:cart_id] = nil
 
