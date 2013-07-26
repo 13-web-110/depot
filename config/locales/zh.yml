@@ -58,7 +58,7 @@ zh:
     application:
       title:       "实用书籍"
       home:        "首页"
-      questions:   "问题"
+      question:   "问题"
       news:        "新闻"
       contact:     "联系我"
       sing_up:     "注册"
@@ -96,8 +96,7 @@ zh:
 #END:checkout
   products:
       show:
-        add_html:    "Add to Cart"
-        
+        add_html:      "加入评论"
   comments:
     form:
       comment_body:    "评论："        
