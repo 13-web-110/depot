@@ -80,10 +80,11 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-    @cart = current_cart
-    @cart.destroy
-    session[:cart_id] = nil
-
+    # @cart = current_cart
+    @cart = Cart.find(params[:id])
+    for delete_line in @cart.line_items do
+      delete_line.destroy
+    end
     respond_to do |format|
       format.html { redirect_to store_url }
       format.json { head :no_content }
