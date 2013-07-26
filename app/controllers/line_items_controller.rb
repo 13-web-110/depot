@@ -43,13 +43,12 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @cart = current_cart
     if session[:user_id] == nil
       respond_to do |format|
-        format.html { redirect_to store_url }
         format.js
       end
     else
+      @cart = current_cart
       product = Product.find(params[:product_id])
       @line_item = @cart.add_product(product.id)
       @line_item.product = product

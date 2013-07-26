@@ -45,6 +45,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
+        @user.cart = current_cart
         format.html { redirect_to users_url,
           notice: "User #{@user.name} was successfully created." }
         format.json { render json: @user,
