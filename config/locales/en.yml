@@ -59,6 +59,8 @@ en:
       questions:   "Questions"
       news:        "News"
       contact:     "Contact"
+      sing_up:     "Sing Up"
+      sing_in:     "Sing In"
 #END:layout
 
 #START:cart
@@ -75,6 +77,7 @@ en:
     index:
       title_html:  "Your Pragmatic Catalog"
       add_html:    "Add to Cart"
+      comment:     "Comment"
 #END:main
 
 #START:checkout
@@ -89,7 +92,14 @@ en:
       pay_prompt_html: "Select a payment method"
       submit:       "Place Order"
 #END:checkout
+  products:
+      show:
+        add_html:    "Add to Cart"
+  
 
+  comments:
+    form:
+      comment_body:    "Comment:"
 #START:flash
   thanks:          "Thank you for your order"
 #END:flash
