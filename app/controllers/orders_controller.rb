@@ -55,7 +55,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         # Cart.destroy(session[:cart_id])
-        OrderNotifier.received(@order).deliver
+        # OrderNotifier.received(@order).deliver
         format.html { redirect_to store_url, notice: 
           I18n.t('.thanks') }
         format.json { render json: @order, status: :created,
