@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
         session[:cart_id] = user.cart.id
       else
         user.cart = current_cart
-        session[:cart_id] = user.cart.id
       end
       redirect_to admin_url
     else

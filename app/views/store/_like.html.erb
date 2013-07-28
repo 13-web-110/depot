@@ -1,0 +1,1 @@
+<%= link_to t('.like') +  "  (" + product.users.count.to_s + ")"  , :controller => 'users', :action => 'like_and_cancer_like', :product_id => product ,remote:true%>

@@ -89,9 +89,38 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
-
+    
     respond_to do |format|
       format.html { redirect_to line_items_url }
+      format.json { head :no_content }
+    end
+  end
+  
+  def minus
+    @cart = current_cart
+    @line_item = LineItem.find(params[:id])
+    if @line_item.quantity > 1
+      @line_item.quantity -= 1
+      @line_item.save
+    else
+      @line_item.destroy
+    end
+  
+    respond_to do |format|
+      format.html { redirect_to store_url }
+      format.js   { @current_item = @line_item }
+      format.json { head :no_content }
+    end
+  end
+  def add
+    @cart = current_cart
+    @line_item = LineItem.find(params[:id])
+    @line_item.quantity += 1
+    @line_item.save
+
+    respond_to do |format|
+      format.html { redirect_to store_url }
+      format.js   { @current_item = @line_item }
       format.json { head :no_content }
     end
   end

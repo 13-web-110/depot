@@ -32,7 +32,8 @@ class CartsController < ApplicationController
   # GET /carts/new
   # GET /carts/new.json
   def new
-    @cart = Cart.new
+    # can not create cart unless user has login
+    @cart = current_cart
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,6 +44,11 @@ class CartsController < ApplicationController
   # GET /carts/1/edit
   def edit
     @cart = Cart.find(params[:id])
+    session[:cart_mode] = "edit"
+    respond_to do|format|
+      format.html{redirect_to store_url}
+      format.js
+    end
   end
 
   # POST /carts
@@ -65,10 +71,11 @@ class CartsController < ApplicationController
   # PUT /carts/1.json
   def update
     @cart = Cart.find(params[:id])
-
+    session[:cart_mode] = nil
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
-        format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
+        format.html { redirect_to store_url}
+        format.js
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -90,4 +97,5 @@ class CartsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
 end

@@ -1,0 +1,5 @@
+<% if session[:user_id] == nil %>
+	alert("Please login First!")
+<% else %>
+	$('#liked_user').html("<%=j render :partial => 'store/like', :locals => {:product => @product} %>");
+<% end %>

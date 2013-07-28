@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726090227) do
+ActiveRecord::Schema.define(:version => 20130728165138) do
 
   create_table "carts", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(:version => 20130726090227) do
   end
 
   add_index "comments", ["product_id"], :name => "index_comments_on_product_id"
+
+  create_table "liked_users", :force => true do |t|
+    t.string   "user_name"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  add_index "liked_users", ["product_id"], :name => "index_liked_users_on_product_id"
 
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
@@ -54,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20130726090227) do
     t.decimal  "price"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "liked_user"
   end
 
   create_table "users", :force => true do |t|
@@ -61,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20130726090227) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "product_id"
   end
 
 end

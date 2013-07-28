@@ -13,8 +13,8 @@ class CartsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
-    assert_response :success
+   get :new
+   assert_response :success
   end
 
   test "should create cart" do
@@ -32,12 +32,12 @@ class CartsControllerTest < ActionController::TestCase
 
   test "should get edit" do
     get :edit, id: @cart
-    assert_response :success
+    assert_redirected_to store_path
   end
 
   test "should update cart" do
     put :update, id: @cart, cart: {  }
-    assert_redirected_to cart_path(assigns(:cart))
+    assert_redirected_to store_path
   end
 
   test "should destroy cart" do

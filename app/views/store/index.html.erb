@@ -17,7 +17,12 @@
       
       <span class="add_cart"><%= button_to t('.add_html'), line_items_path(product_id: product), remote:true %></span>
     </div>
+    
+    <div id="liked_user_<%= product.id %>">
 
+    		<%= link_to t('.like') +  "  (" +  product.liked_users.count.to_s + ")" , liked_users_path(product_id: product), :method => :post ,remote:true %>
+			
+    </div>
     
   </div>
 <% end %>

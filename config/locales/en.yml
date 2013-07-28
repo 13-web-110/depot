@@ -70,6 +70,7 @@ en:
       total:	   "Total"
       empty:       "Empty cart"
       checkout:    "Checkout"
+      update:     "update"
 #END:cart
 
 #START:main
@@ -78,6 +79,8 @@ en:
       title_html:  "Your Pragmatic Catalog"
       add_html:    "Add to Cart"
       comment:     "Comment"
+    like:
+      like:         "like"
 #END:main
 
 #START:checkout

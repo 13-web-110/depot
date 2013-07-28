@@ -1,5 +1,10 @@
 # By WEB 110
 Product.delete_all
+Comment.delete_all
+Order.delete_all
+Cart.delete_all
+User.delete_all
+
 Product.create(title: 'CoffeeScript',
   description: 
     %{<p>
