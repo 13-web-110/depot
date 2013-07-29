@@ -78,11 +78,13 @@ zh:
 #START:main
   store:
     index:
+      welcome:     "欢迎"
       title_html:  "书籍目录"
       add_html:    "加入购物车"
       comment:     "评论"
     like:
       like:         "赞"
+      cancer_like:  "取消 赞"
 #END:main
 
 #START:checkout

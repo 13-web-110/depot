@@ -5,4 +5,14 @@ module ApplicationHelper
     end
     content_tag("div", attributes, &block)
   end
+
+  def show_user_name
+    if(session[:user_id] != nil)
+      @user = User.find_by_id(session[:user_id])
+      @user.name
+    else
+      ""
+    end
+  end
+  
 end

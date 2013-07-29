@@ -15,6 +15,9 @@ Depot::Application.routes.draw do
 
     resources :line_items
     resources :liked_users
+    
+    get 'liked_users/cancer_like/:product_id' => 'liked_users#cancer_like'
+    
     resources :carts
     
     get 'line_item/minus/:id' => 'line_items#minus'

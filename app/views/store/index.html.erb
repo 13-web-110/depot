@@ -3,7 +3,7 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1><%= t('.title_html')%></h1>
+<h1><%= show_user_name + "  " + t('.title_html')%></h1>
 
 <% @products.each do |product| %>
   <div class="entry">
@@ -19,9 +19,11 @@
     </div>
     
     <div id="liked_user_<%= product.id %>">
-
+		<% if session[:user_id] == nil || !product.liked_users.exists?(:user_id => session[:user_id]) %>
     		<%= link_to t('.like') +  "  (" +  product.liked_users.count.to_s + ")" , liked_users_path(product_id: product), :method => :post ,remote:true %>
-			
+		<% else %>
+			<%= link_to t('.cancer_like') +  "  (" +  product.liked_users.count.to_s + ")" , :controller => 'liked_users', :action => 'cancer_like', :product_id => product.id ,remote:true %>
+		<% end %>
     </div>
     
   </div>
