@@ -14,15 +14,20 @@ Depot::Application.routes.draw do
     resources :orders
 
     resources :line_items
-
-    resources :carts
-
+    resources :liked_users
     
+    get 'liked_users/cancer_like/:product_id' => 'liked_users#cancer_like'
+    
+    resources :carts
+    
+    get 'line_item/minus/:id' => 'line_items#minus'
+    get 'line_item/add/:id' => 'line_items#add'
 
     resources :products do
       get :who_bought, on: :member
       resources :comments
     end
+    
     root to: 'store#index', as: 'store'
 
   end

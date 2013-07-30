@@ -70,14 +70,19 @@ en:
       total:	   "Total"
       empty:       "Empty cart"
       checkout:    "Checkout"
+      update:     "update"
 #END:cart
 
 #START:main
   store:
     index:
+      welcome:     "welcome"
       title_html:  "Your Pragmatic Catalog"
       add_html:    "Add to Cart"
       comment:     "Comment"
+    like:
+      like:         "like"
+      caner_like:   "cancer like"
 #END:main
 
 #START:checkout

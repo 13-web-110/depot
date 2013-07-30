@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :password, :password_confirmation, :cart_id
+  attr_accessible :name, :password, :password_confirmation, :cart_id 
+  
+
+  
   validates :name, presence: true, uniqueness: true
   has_secure_password
 

@@ -92,4 +92,27 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # def like_and_cancer_like 
+    # if session[:user_id] == nil
+      # respond_to do |format|
+        # format.js
+      # end
+    # else
+      # @product = Product.find_by_id(params[:product_id])
+#      
+      # #@user = @product.users.build(session[:user_id])
+      # @user = User.find_by_id(session[:user_id])
+      # @product.users <<(@user)
+      # @user.product = @product
+#       
+      # @product.save
+      # @user.save
+      # respond_to do |format|
+        # format.html {redirect_to store_url}
+        # format.js
+      # end
+    # end
+  # end
+  
 end
