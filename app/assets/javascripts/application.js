@@ -14,3 +14,13 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
+
+function checkSearchString()
+{
+	if($("#search_name").val() == "")
+	{
+		alert("Could not be empty");
+		return false;
+	}
+	return true;
+}

@@ -8,11 +8,17 @@
 </head>
 <body class="<%= controller.controller_name %>">
   <div id="banner">
-    <%= form_tag store_path,method: :get,class: 'locale' do %>
+
+    <%= form_tag store_path,method: :get, class: 'locale' do %>
       <%= select_tag 'set_locale', 
         options_for_select(LANGUAGES, I18n.locale.to_s),
         onchange: 'this.form.submit()' %>
       <%= javascript_tag "$('.locale input').hide()" %>
+    <% end %>
+
+    <%= form_tag search_path, :method => :get, :onsubmit => 'return checkSearchString()',class: 'search' do %>
+      <%= text_field_tag :search_name %>
+      <%= submit_tag "Search" %>
     <% end %>
 
     <%= image_tag("logo.png") %>

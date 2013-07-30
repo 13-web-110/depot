@@ -84,7 +84,9 @@ en:
       like:         "like"
       caner_like:   "cancer like"
 #END:main
-
+  search:
+      results:
+        add_html:    "Add to Cart"
 #START:checkout
   orders:
     new:
@@ -100,7 +102,6 @@ en:
   products:
       show:
         add_html:    "Add to Cart"
-  
 
   comments:
     form:

@@ -1,0 +1,23 @@
+<% @products.each do |product| %>
+  <div class="entry">
+    <%= image_tag(product.image_url) %>
+    <h3><%= product.title %></h3>
+    <p><%= sanitize(product.description) %></p>
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(product.price) %></span>
+
+      <span class="comment"><%= link_to t('.comment') +  "  (" + product.comments.count.to_s + ")"  , product %></span>
+      
+      <span class="add_cart"><%= button_to t('.add_html'), line_items_path(product_id: product), remote:true %></span>
+    </div>
+    
+    <div id="liked_user_<%= product.id %>">
+    <% if session[:user_id] == nil || !product.liked_users.exists?(:user_id => session[:user_id]) %>
+        <%= link_to t('.like') +  "  (" +  product.liked_users.count.to_s + ")" , liked_users_path(product_id: product), :method => :post ,remote:true %>
+    <% else %>
+      <%= link_to t('.cancer_like') +  "  (" +  product.liked_users.count.to_s + ")" , :controller => 'liked_users', :action => 'cancer_like', :product_id => product.id ,remote:true %>
+    <% end %>
+    </div>
+    
+  </div>
+<% end %>
