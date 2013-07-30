@@ -7,7 +7,16 @@ class StoreController < ApplicationController
   	else
     	@products = Product.order(:title)
 	  	@cart = current_cart
-
+       session[:cart_mode] = nil
   	end
+  end
+  def question
+    
+  end
+  def contact
+    
+  end
+  def news
+    
   end
 end

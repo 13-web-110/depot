@@ -12,7 +12,14 @@ class SessionsController < ApplicationController
       else
         user.cart = current_cart
       end
-      redirect_to admin_url
+      
+      if user.name == 'admin'
+        session[:admin_id] = user.id
+        redirect_to admin_url
+      else
+        redirect_to store_url
+      end
+      
     else
       redirect_to login_url, alert: "Invalid user/password combination"
     end
@@ -21,6 +28,8 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     session[:cart_id] = nil
+    session[:admin_id] = nil
+    session[:cart_mode] = nil
     redirect_to store_url, notice: "Logged out"
   end
 end

@@ -5,6 +5,8 @@ Order.delete_all
 Cart.delete_all
 User.delete_all
 
+User.create(name: 'admin', password: 'admin', password_confirmation: 'admin')
+
 Product.create(title: 'CoffeeScript',
   description: 
     %{<p>
