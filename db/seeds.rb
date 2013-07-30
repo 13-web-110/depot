@@ -17,7 +17,7 @@ Product.create(title: 'CoffeeScript',
   shows you how to hold onto all the power and flexibility of JavaScript
   while writing clearer, cleaner, and safer code.
       </p>},
-  image_url:   'cs.jpg',    
+  image_url:   'images/cs.jpg',    
   price: 36.00)
 # . . .
 Product.create(title: 'Programming Ruby 1.9',
@@ -27,7 +27,7 @@ Product.create(title: 'Programming Ruby 1.9',
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
       </p>},
-  image_url: 'ruby.jpg',
+  image_url: 'images/ruby.jpg',
   price: 49.95)
 # . . .
 
@@ -41,7 +41,7 @@ Product.create(title: 'Rails Test Prescriptions',
         procedures for Rails 2 and Rails 3, and introduces popular add-ons,
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
-  image_url: 'rtp.jpg',
+  image_url: 'images/rtp.jpg',
   price: 34.95)
 # . . .
   
@@ -55,7 +55,7 @@ Product.create(title: 'Pride and Prejudice',
         fixed in theminds of the surrounding families, that he is considered 
         as the rightfulproperty of some one or other of their daughters.
       </p>},
-  image_url: 'pride.png',
+  image_url: 'images/pride.png',
   price: 14.70)
 # . . .
 
@@ -68,7 +68,7 @@ Product.create(title: 'Pride and Prejudice(kindle版)',
         includes wireless delivery.It is a truth universally acknowledged, 
         that a single man in posses-sion of a good fortune must be in want of a wife.
       </p>},
-  image_url: 'prid2.png',
+  image_url: 'images/prid2.png',
   price: 13.70)
 # . . .
 
@@ -85,7 +85,7 @@ Product.create(title: 'The Little Prince',
         The artwork in this new edition has been restored to match in detail and in color 
         Saint-Exupéry's original artwork.
       </p>},
-  image_url: 'little.png',
+  image_url: 'images/little.png',
   price: 73.40)
 # . . .
 
@@ -101,7 +101,7 @@ Product.create(title: '奇幻百科：精灵',
                             还是他们统治着一个不为人类所知的平行世界？如何能更好地认识这一神秘物种？ 
                             这些就是《精灵》试图回答的问题。
       </p>},
-  image_url: 'jing.png',
+  image_url: 'images/jing.png',
   price: 13.60)
 # . . .
 
@@ -115,7 +115,7 @@ Product.create(title: '少年pi的奇幻漂流',
                           更激荡出高潮不断的阅读惊喜。小说内容关于冒险、希望、奇迹、生存和信心， 是一个能让人产生信仰的故事，
                           同时也会让读者重新认识文学并相信文学的力量。
       </p>},
-  image_url: 'pi.png',
+  image_url: 'images/pi.png',
   price: 21.00)
 # . . .
 
@@ -128,7 +128,7 @@ Product.create(title: '平凡的世界',
                              共三部。劳动与爱情，挫折与追求， 痛苦与欢乐，日常生活与巨大社会冲突，纷繁地交织在一起，
                              深刻地展示了普通人在大时代历史进程中所走过的艰难曲折的道路。
       </p>},
-  image_url: 'luyao.png',
+  image_url: 'images/luyao.png',
   price: 30.08)
 # . . .
 
@@ -141,7 +141,7 @@ Product.create(title: '牧羊少年奇幻之旅',
                             奇遇不断， 在一位炼金术士的指引下，他终于到达金字塔前，悟出了宝藏的真正所在。法国文化部部长将作
                             者保罗·科埃略称为“数百万读者心中的炼金术士”。
       </p>},
-  image_url: 'mu.png',
+  image_url: 'images/mu.png',
   price: 16.30)
 # . . .
 
@@ -156,7 +156,7 @@ Product.create(title: '程序员面试宝典（第3版）',
                            新增加了对友元、Static、图形/音频、树、栈、ERP等问题的深入讲解。 最后《程序员面试宝典(第3版)》
                            着力讲述了如何进行英语面试和电话面试，并对求职中签约、毁约的注意事项及群体面试进行了解析。
       </p>},
-  image_url: 'mian.png',
+  image_url: 'images/mian.png',
   price: 30.20)
 # . . .
 
@@ -172,7 +172,7 @@ Product.create(title: '程序员面试宝典（第4版）',
                            最后本书着力讲述了如何进行英语面试和电话面试，并对求职 中签约、毁约的注意事项及群体面试进行了解析。
                            本书的面试题除了有详细解析和答案外，对相关知识点还有扩展说明。
       </p>},
-  image_url: 'mian4.png',
+  image_url: 'images/mian4.png',
   price: 33.00)
 # . . .
 
@@ -187,7 +187,7 @@ Product.create(title: '程序员面试笔试宝典',
                            求职过程生动形象地展示在读者面前，进而对求职 者起到一定的指引作用。《程序员面试笔试宝典》也对各种类型
                            的IT企业的招聘环节进行了庖丁解牛式的分析， 帮助求职者能够更加有针对性地进行求职准备。
       </p>},
-  image_url: 'bishi.png',
+  image_url: 'images/bishi.png',
   price: 40.70)
 # . . .
 

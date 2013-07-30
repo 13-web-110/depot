@@ -11,12 +11,23 @@ class StoreController < ApplicationController
   	end
   end
   def question
-    
+
   end
   def contact
-    
+
   end
   def news
-    
+
   end
+  
+  def index_old
+    if params[:set_locale]
+      redirect_to store_path(locale: params[:set_locale])
+    else
+      @products = Product.order(:title)
+      @cart = current_cart
+       session[:cart_mode] = nil
+    end
+  end
+
 end
