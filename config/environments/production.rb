@@ -1,6 +1,19 @@
 Depot::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+  config.mailer_sender = "13web110@gmail.com"
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "heroku.com",
+    authentication: "plain",
+    # user_name: "dave",
+    user_name: "13web110@gmail.com",
+    # password: "secret",
+    password: "maweb110",
+    enable_starttls_auto: true
+  }
+  config.action_mailer.raise_delivery_errors = false
   # Code is not reloaded between requests
   config.cache_classes = true
 
