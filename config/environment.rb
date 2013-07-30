@@ -10,7 +10,7 @@ config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
 address: "smtp.gmail.com",
 port: 587,
-domain: "domain.of.sender.net",
+# domain: "domain.of.sender.net",
 authentication: "plain",
 # user_name: "dave",
 user_name: "13web110@gmail.com",
