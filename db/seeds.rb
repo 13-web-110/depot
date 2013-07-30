@@ -4,7 +4,11 @@ Comment.delete_all
 Order.delete_all
 Cart.delete_all
 User.delete_all
+<<<<<<< HEAD
 User.create(name: 'admin', password: 'admin', password_confirmation: 'admin')
+=======
+User.create(name:'admin', password:'admin', password_confirmation:'admin')
+>>>>>>> 140011594665de7125fedd432bfd614d25edc765
 Product.create(title: 'CoffeeScript',
   description: 
     %{<p>
