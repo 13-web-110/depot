@@ -23,6 +23,8 @@ Depot::Application.routes.draw do
     get 'line_item/minus/:id' => 'line_items#minus'
     get 'line_item/add/:id' => 'line_items#add'
 
+    get 'search/:search_name' => 'search#results', as: 'search'
+
     resources :products do
       get :who_bought, on: :member
       resources :comments
