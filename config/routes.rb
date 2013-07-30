@@ -1,4 +1,3 @@
-
 Depot::Application.routes.draw do
   get 'admin' => 'admin#index'
   get "store/index"
@@ -26,6 +25,8 @@ Depot::Application.routes.draw do
     
     get 'line_item/minus/:id' => 'line_items#minus'
     get 'line_item/add/:id' => 'line_items#add'
+
+    get 'search' => 'search#results'
 
     resources :products do
       get :who_bought, on: :member

@@ -87,6 +87,9 @@ zh:
       cancer_like:  "取消 赞"
 #END:main
 
+  search:
+    results:
+      add_html:    "加入购物车"
 #START:checkout
   orders:
     new:
