@@ -10,7 +10,7 @@ class SessionsControllerTest < ActionController::TestCase
     dave = users(:one)
     
     post :create, name: dave.name, password: 'secret'
-    assert_redirected_to admin_url
+    assert_redirected_to store_path
     assert_equal dave.id, session[:user_id]
   end
 

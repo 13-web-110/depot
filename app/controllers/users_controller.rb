@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :authorize, only: [:new, :create]
+
   # GET /users
   # GET /users.json
   def index
@@ -47,6 +48,9 @@ class UsersController < ApplicationController
       if @user.save
         session[:user_id] = @user.id
         @user.cart = current_cart
+        if @user.name == 'admin'
+          session[:admin_id] = @user.id
+        end
         format.html { redirect_to users_url,
           notice: "User #{@user.name} was successfully created." }
         format.json { render json: @user,
@@ -66,7 +70,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to users_url,
+        format.html { redirect_to store_url,
           notice: "User #{@user.name} was successfully updated." }
         format.json { head :no_content }
       else
@@ -93,6 +97,13 @@ class UsersController < ApplicationController
     end
   end
   
+  
+  protected
+    def admin_authorize
+      unless User.find_by_id(session[:admin_id])
+        redirect_to store_url
+      end
+    end
   # def like_and_cancer_like 
     # if session[:user_id] == nil
       # respond_to do |format|

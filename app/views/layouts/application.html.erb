@@ -31,18 +31,20 @@
 
       <ul>
         <li><%= link_to t('.home'),store_path %></li>
-        <li><%= link_to t('.question'),store_path %></li>
-        <li><%= link_to t('.news'),store_path %></li>
-        <li><%= link_to t('.contact'),store_path %></li>
+        <li><%= link_to t('.question'),store_question_path %></li>
+        <li><%= link_to t('.news'),store_news_path %></li>
+        <li><%= link_to t('.contact'),store_contact_path %></li>
       </ul>
 
 
       <% if session[:user_id] %>
+      	<% if session[:admin_id]%>
         <ul>
           <li><%= link_to 'Orders',   orders_path   %></li>
           <li><%= link_to 'Products', products_path %></li>
           <li><%= link_to 'Users',    users_path    %></li>
         </ul>
+        <% end %>
         <%= button_to 'Logout', logout_path, method: :delete   %>
       <% end %>
       <% unless session[:user_id] %>
