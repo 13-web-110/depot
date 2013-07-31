@@ -95,6 +95,8 @@ en:
 #START:checkout
   orders:
     new:
+      title:        "Your Cart"
+      total:        "Total"
       legend:       "Please Enter Your Details"
     form:
       name:         "Name"

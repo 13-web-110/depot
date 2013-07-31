@@ -98,6 +98,8 @@ zh:
 #START:checkout
   orders:
     new:
+      title:        "你的订单"
+      total:        "合计"
       legend:       "输入详细个人信息"
     form:
       name:         "姓名"
