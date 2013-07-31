@@ -15,6 +15,11 @@
 //= require jquery_ujs
 //= require_tree .
 
+function toggleCart()
+{
+	$("#cart").slideToggle("slow");
+}
+
 function checkSearchString()
 {
 	if($("#search_name").val() == "")
