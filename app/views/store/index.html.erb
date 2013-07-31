@@ -5,14 +5,13 @@
   	<div class="md-content">
     
     	<h3><%= product.title %></h3>
-		<div>
-   		<p><%= sanitize(product.description) %></p>
-    	
-
-      	<span class="price"><%= number_to_currency(product.price) %></span>
-
-
-    	<button class="md-close">Close me!</button>
+		<div class="md-content-detail">
+   			<div><%= sanitize(product.description) %></div>
+   			<%= number_to_currency(product.price) %>
+   		
+		</div>
+		<div >
+    	<button class="md-close">Close</button>
     	</div>
     </div>
   </div>

@@ -32,14 +32,23 @@
   	<% end %>
 
   	<div id="banner">
-
-  		
-	    <%= form_tag store_path,method: :get, class: 'locale' do %>
+  		<%= form_tag store_path,method: :get, class: 'locale' do %>
 	      <%= select_tag 'set_locale', 
 	        options_for_select(LANGUAGES, I18n.locale.to_s),
 	        onchange: 'this.form.submit()' %>
 	      <%= javascript_tag "$('.locale input').hide()" %>
 	    <% end %>
+
+			<% if session[:user_id] %>
+    			<%= link_to 'Logout',	logout_path, class: 'locale' ,method: :delete %>
+  		    <% end %>
+		 	<% unless session[:user_id] %>
+      		
+      			
+      			<%= link_to t('.sing_up') , new_user_path,class: 'locale'  %>
+      			<%= link_to t('.sing_in') , login_url ,class: 'locale'  %>
+      			
+      		<% end %>
 
   	</div>
 		
@@ -64,23 +73,13 @@
         			<%= link_to t('.news'),store_news_path %>
         			<%= link_to t('.contact'),store_contact_path %>
         			
-        			
-    		<% if session[:user_id] %>
-  				<% if session[:admin_id]%>
-    
-     			<%= link_to 'Orders',   orders_path   %>
-      			<%= link_to 'Products', products_path %>
-      			<%= link_to 'Users',    users_path    %>
-      			<%= link_to 'Logout',	logout_path, method: :delete %>
-
-    			<% end %>
-  		    <% end %>
-		 	<% unless session[:user_id] %>
-      		
-      			<%= link_to t('.sing_in') , login_url %>
-      			<%= link_to t('.sing_up') , new_user_path %>
-      	
-      		<% end %>
+        			<% if session[:admin_id]%>
+    				<p></p>
+     				<%= link_to 'Orders',   orders_path   %>
+      				<%= link_to 'Products', products_path %>
+      				<%= link_to 'Users',    users_path    %>
+    				<% end %>
+    	
    
 			</nav>
 				 

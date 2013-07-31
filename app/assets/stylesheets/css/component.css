@@ -138,6 +138,16 @@ perspective effects (not including the modals and the overlay).
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
+	div {
+		display :inline
+	}
+	.md-content-detail{
+
+		img {
+    		width: 60px;
+    		height: 70px;
+    	}
+	}
 }
 
 .md-content h3 {
@@ -156,6 +166,7 @@ perspective effects (not including the modals and the overlay).
 	margin: 0;
 	font-weight: 300;
 	font-size: 1.15em;
+	text-align: center;
 }
 
 .md-content > div p {
