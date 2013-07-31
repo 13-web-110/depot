@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.price_line div
+{
+  padding-left: 10px;
+  height: 30px;
+}
+
+.price, .add_cart, .comment, .liked
+{
+  // display: inline;
+  // padding: 10px;
+  margin-left: 20px;
+  width: 100px;
+  height: 25px;
+  float: left;
+}
+
 // .store {
   // h1 {
     // margin: 0;
