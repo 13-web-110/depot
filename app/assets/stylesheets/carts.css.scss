@@ -1,9 +1,25 @@
-.carts, #side #cart {
-  .item_price, .total_line {
-    text-align: right;
-  }
-  .total_line .total_cell {
-    font-weight: bold;
-    border-top: 1px solid #595;
-  }
+// .carts, #side #cart {
+//   .item_price, .total_line {
+//     text-align: right;
+//   }
+//   .total_line .total_cell {
+//     font-weight: bold;
+//     border-top: 1px solid #595;
+//   }
+// }
+
+
+#cart_side
+{
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	background-color: #fff;
+	padding: 1em;
+	z-index: 2;
+}
+
+#cart_side .button_to
+{
+	float: right;
 }
