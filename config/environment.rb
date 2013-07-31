@@ -12,8 +12,8 @@ address: "smtp.gmail.com",
 port: 587,
 domain: "heroku.com",
 authentication: "plain",
-user_name: "dave",
-password: "secret",
+user_name: "13web110@gmail.com",
+password: "maweb110",
 enable_starttls_auto: true
 }
 end
