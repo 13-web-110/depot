@@ -1,5 +1,7 @@
+
 #encoding: utf-8
 # By WEB 110
+
 Product.delete_all
 Comment.delete_all
 Order.delete_all
@@ -271,6 +273,7 @@ Product.create(title: '看见',
   price: 29.40)
 # . . .
 
+
 Product.create(title: '就这么飘来飘去',
   description: 
     %{<p>
@@ -538,8 +541,8 @@ Product.create(title: '三国演义',
       </p>},
   image_url: 'images/san.png',
   price: 17.00)
-# . . .
 
+# . . .
 Product.create(title: '红楼梦',
   description: 
     %{<p>
@@ -552,4 +555,5 @@ Product.create(title: '红楼梦',
       </p>},
   image_url: 'images/meng.png',
   price: 35.36)
+
 # . . .
