@@ -1,1 +1,2 @@
-$('#liked_user_<%= @product.id %>').html("<%=j link_to t('.like') +  "  (" + @product.liked_users.count.to_s + ")"  ,liked_users_path(product_id: @product.id),:method => :post ,remote:true %>")
+$('#liked_user_<%= @product.id %>').html("<%=j link_to t('.like') + 
+ "  (" + @product.liked_users.count.to_s + ")"  ,liked_users_path(product_id: @product.id),:method => :post ,remote:true %>")
