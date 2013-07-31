@@ -51,10 +51,10 @@
 			<header>
 				<h1>Pragprog Books Online Store<span>Nice to meet you</span></h1>	
 				<nav class="codrops-demos">
-					<%= link_to 'home',store_path %>
-        			<%= link_to 'question',store_question_path %>
-        			<%= link_to 'news',store_news_path %>
-        			<%= link_to 'contact',store_contact_path %>
+					<%= link_to t('.home'),store_path %>
+        			<%= link_to t('.questions'),store_question_path %>
+        			<%= link_to t('.news'),store_news_path %>
+        			<%= link_to t('.contact'),store_contact_path %>
         			
         			
         		<% if session[:user_id] %>
