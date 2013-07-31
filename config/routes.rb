@@ -4,6 +4,7 @@ Depot::Application.routes.draw do
   get "store/question"
   get "store/news"
   get "store/contact"
+  get "store/category"
   get "index_old" => 'store#index_old'
   
   controller :sessions do

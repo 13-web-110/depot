@@ -61,6 +61,8 @@ en:
       contact:     "Contact"
       sing_up:     "Sing Up"
       sing_in:     "Sing In"
+      category:    "Category"
+      
 #END:layout
 
 #START:cart

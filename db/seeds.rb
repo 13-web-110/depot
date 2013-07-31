@@ -18,7 +18,8 @@ Product.create(title: 'CoffeeScript',
   while writing clearer, cleaner, and safer code.
       </p>},
   image_url:   'images/cs.jpg',    
-  price: 36.00)
+  price: 36.00,
+  library_type: 'IT')
 # . . .
 Product.create(title: 'Programming Ruby 1.9',
   description:
@@ -28,7 +29,8 @@ Product.create(title: 'Programming Ruby 1.9',
         you should add Ruby to your toolbox.
       </p>},
   image_url: 'images/ruby.jpg',
-  price: 49.95)
+  price: 49.95,
+  library_type: 'IT')
 # . . .
 
 Product.create(title: 'Rails Test Prescriptions',
@@ -42,7 +44,8 @@ Product.create(title: 'Rails Test Prescriptions',
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
   image_url: 'images/rtp.jpg',
-  price: 34.95)
+  price: 34.95,
+  library_type: 'IT')
 # . . .
   
 Product.create(title: 'Pride and Prejudice',
@@ -56,7 +59,8 @@ Product.create(title: 'Pride and Prejudice',
         as the rightfulproperty of some one or other of their daughters.
       </p>},
   image_url: 'images/pride.png',
-  price: 14.70)
+  price: 14.70,
+  library_type: '文学')
 # . . .
 
 Product.create(title: 'Pride and Prejudice(kindle版)',
@@ -69,7 +73,8 @@ Product.create(title: 'Pride and Prejudice(kindle版)',
         that a single man in posses-sion of a good fortune must be in want of a wife.
       </p>},
   image_url: 'images/prid2.png',
-  price: 13.70)
+  price: 13.70,
+  library_type: '文学')
 # . . .
 
 Product.create(title: 'The Little Prince',
@@ -86,7 +91,8 @@ Product.create(title: 'The Little Prince',
         Saint-Exupéry's original artwork.
       </p>},
   image_url: 'images/little.png',
-  price: 73.40)
+  price: 73.40,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '奇幻百科：精灵',
@@ -102,7 +108,8 @@ Product.create(title: '奇幻百科：精灵',
                             这些就是《精灵》试图回答的问题。
       </p>},
   image_url: 'images/jing.png',
-  price: 13.60)
+  price: 13.60,
+  library_type: '奇幻')
 # . . .
 
 Product.create(title: '少年pi的奇幻漂流',
@@ -116,7 +123,8 @@ Product.create(title: '少年pi的奇幻漂流',
                           同时也会让读者重新认识文学并相信文学的力量。
       </p>},
   image_url: 'images/pi.png',
-  price: 21.00)
+  price: 21.00,
+  library_type: '奇幻')
 # . . .
 
 Product.create(title: '平凡的世界',
@@ -129,7 +137,8 @@ Product.create(title: '平凡的世界',
                              深刻地展示了普通人在大时代历史进程中所走过的艰难曲折的道路。
       </p>},
   image_url: 'images/luyao.png',
-  price: 30.08)
+  price: 30.08,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '牧羊少年奇幻之旅',
@@ -142,7 +151,8 @@ Product.create(title: '牧羊少年奇幻之旅',
                             者保罗·科埃略称为“数百万读者心中的炼金术士”。
       </p>},
   image_url: 'images/mu.png',
-  price: 16.30)
+  price: 16.30,
+  library_type: '奇幻')
 # . . .
 
 Product.create(title: '程序员面试宝典（第3版）',
@@ -157,7 +167,8 @@ Product.create(title: '程序员面试宝典（第3版）',
                            着力讲述了如何进行英语面试和电话面试，并对求职中签约、毁约的注意事项及群体面试进行了解析。
       </p>},
   image_url: 'images/mian.png',
-  price: 30.20)
+  price: 30.20,
+  library_type: 'IT')
 # . . .
 
 Product.create(title: '程序员面试宝典（第4版）',
@@ -175,7 +186,8 @@ Product.create(title: '程序员面试宝典（第4版）',
                            本书的面试题除了有详细解析和答案外，对相关知识点还有扩展说明。
       </p>},
   image_url: 'images/mian4.png',
-  price: 33.00)
+  price: 33.00,
+  library_type: 'IT')
 # . . .
 
 Product.create(title: '程序员面试笔试宝典',
@@ -192,7 +204,8 @@ Product.create(title: '程序员面试笔试宝典',
                            的IT企业的招聘环节进行了庖丁解牛式的分析， 帮助求职者能够更加有针对性地进行求职准备。
       </p>},
   image_url: 'images/bishi.png',
-  price: 40.70)
+  price: 40.70,
+  library_type: 'IT')
 # . . .
 
 Product.create(title: '重口味心理学',
@@ -207,7 +220,8 @@ Product.create(title: '重口味心理学',
                              配有大量生动真实的案例，并附作者独到的分析，教你如何一眼看穿身边人的所有秘密和怪癖。
       </p>},
   image_url: 'images/2.png',
-  price: 42.60)
+  price: 42.60,
+  library_type: '心理学')
 # . . .
 
 Product.create(title: '说谎心理学',
@@ -228,9 +242,9 @@ Product.create(title: '说谎心理学',
                             因为他们在说谎时，真的相信自己的谎言。
       </p>},
   image_url: 'images/shuo.png',
-  price: 22.90)
+  price: 22.90,
+  library_type: '心理学')
 # . . .
-
 Product.create(title: '怪诞心理学',
   description: 
     %{<p>
@@ -242,7 +256,8 @@ Product.create(title: '怪诞心理学',
                            鉴于这些心理操控原理威力强大，请不要以此招摇撞骗哦！
       </p>},
   image_url: 'images/guai.png',
-  price: 17.50)
+  price: 17.50,
+  library_type: '心理学')
 # . . .
 
 
@@ -268,7 +283,8 @@ Product.create(title: '看见',
 
       </p>},
   image_url: 'images/kan.png',
-  price: 29.40)
+  price: 29.40,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '就这么飘来飘去',
@@ -286,7 +302,8 @@ Product.create(title: '就这么飘来飘去',
                            以来都没有放弃，最终他站上了冠军的领奖台。《就这么漂来漂去》就是韩寒的一本赛车励志自传。
       </p>},
   image_url: 'images/han.png',
-  price: 28.80)
+  price: 28.80,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '蛙',
@@ -299,7 +316,8 @@ Product.create(title: '蛙',
                            象，同时也深刻剖析了以叙述人蝌蚪为代表的中国知识分子卑微、尴尬、纠结、矛盾的灵魂世界。
       </p>},
   image_url: 'images/wa.png',
-  price: 25.60)
+  price: 25.60,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '丰乳肥臀',
@@ -313,7 +331,8 @@ Product.create(title: '丰乳肥臀',
                              导致的悲惨命运，具有拷问灵魂的深度和力度。
       </p>},
   image_url: 'images/feng.png',
-  price: 28.80)
+  price: 28.80,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '酒国',
@@ -328,7 +347,8 @@ Product.create(title: '酒国',
                              说文体的“满汉全席”。
       </p>},
   image_url: 'images/jiu.png',
-  price: 22.20)
+  price: 22.20,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '莫言自选集',
@@ -343,7 +363,8 @@ Product.create(title: '莫言自选集',
                             中的作家。至于我自己，并不缺乏路见不平挺身而出的勇气，但用文学的方式发言可能更符合我的性格。
       </p>},
   image_url: 'images/mo.png',
-  price: 33.00)
+  price: 33.00,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '红高粱家族',
@@ -361,7 +382,8 @@ Product.create(title: '红高粱家族',
                               利 NONINO 国际文学奖；第二届世界华文长篇小说奖“红楼梦奖”；第八届茅盾文学奖，等等。
       </p>},
   image_url: 'images/hong.png',
-  price: 372.20)
+  price: 372.20,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '蓝色城堡',
@@ -374,7 +396,8 @@ Product.create(title: '蓝色城堡',
                              长篇小说《蛙》获第八届茅盾文学奖。2012年获诺贝尔文学奖。
       </p>},
   image_url: 'images/lan.png',
-  price: 21.30)
+  price: 21.30,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '跟莫言学写作',
@@ -387,7 +410,8 @@ Product.create(title: '跟莫言学写作',
                               《跟莫言学写作》由管遵华编著。
       </p>},
   image_url: 'images/gen.png',
-  price: 21.00)
+  price: 21.00,
+  library_type: '文学')
 # . . .
 
 Product.create(title: '幻夜',
@@ -405,7 +429,8 @@ Product.create(title: '幻夜',
                               她，到底是谁？
       </p>},
   image_url: 'images/huan.png',
-  price: 20.40)
+  price: 20.40,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '空中杀人现场',
@@ -420,7 +445,8 @@ Product.create(title: '空中杀人现场',
                               上丢失了遗书，谁看起来像准备赴死之人？久别重逢的初恋情人，是无辜蒙受不白之冤，还是居心叵测暗怀杀机？
       </p>},
   image_url: 'images/kong.png',
-  price: 17.90)
+  price: 17.90,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '邪恶催眠师',
@@ -435,7 +461,8 @@ Product.create(title: '邪恶催眠师',
                               而他们之间的斗争，却将所有普通人的命运卷入其中。
       </p>},
   image_url: 'images/xie.png',
-  price: 22.00)
+  price: 22.00,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '谁杀了她',
@@ -448,7 +475,8 @@ Product.create(title: '谁杀了她',
                              究竟，是谁杀了她？
       </p>},
   image_url: 'images/shui.png',
-  price: 20.40)
+  price: 20.40,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '间谍课:复仇者',
@@ -463,7 +491,8 @@ Product.create(title: '间谍课:复仇者',
                            保措施，让这个地方进都进不来，更何况还要带着目标活着出去……
       </p>},
   image_url: 'images/jian.png',
-  price: 22.10)
+  price: 22.10,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '名侦探柯南',
@@ -477,7 +506,8 @@ Product.create(title: '名侦探柯南',
                              疯狂！！！极具明星气质的柯南炫目出场，拥有它，绝对超值！
       </p>},
   image_url: 'images/kenan.png',
-  price: 11.10)
+  price: 11.10,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '福尔摩斯探案全集',
@@ -490,11 +520,12 @@ Product.create(title: '福尔摩斯探案全集',
                             令人惊心动魄。
       </p>},
   image_url: 'images/fu.png',
-  price: 39.90)
+  price: 39.90,
+  library_type: '悬疑')
 # . . .
 
 Product.create(title: '中国四大经典名著:西游记',
-  description: 
+  description:
     %{<p>
         <em>中国四大经典名著:西游记</em> 内容简介：神通广大的孙悟空，贪吃懒惰的猪八戒，慈悲善良的
                               唐三藏和朴实忠诚的沙和尚，这些家喻户晓的人物就是《西游记》中的主角，取经路上，
@@ -506,7 +537,8 @@ Product.create(title: '中国四大经典名著:西游记',
                               阅读，学会思考、喜欢思考，是编写《中国四大经典名著:西游记(彩图注音版)》的目的所在。
       </p>},
   image_url: 'images/xi.png',
-  price: 20.90)
+  price: 20.90,
+  library_type: '名著')
 # . . .
 
 Product.create(title: '水浒传',
@@ -518,7 +550,8 @@ Product.create(title: '水浒传',
                             形象地揭示了封建社会“官逼民反”的客观真理和农民起义失败的内在原因。
       </p>},
   image_url: 'images/hu.png',
-  price: 15.70)
+  price: 15.70,
+  library_type: '名著')
 # . . .
 
 Product.create(title: '三国演义',
@@ -537,7 +570,8 @@ Product.create(title: '三国演义',
                           进行再加工和创作，将历代口耳相传的各自孤立的故事集合成了“七分实事，三分虚构”的小说——《三国演义》。
       </p>},
   image_url: 'images/san.png',
-  price: 17.00)
+  price: 17.00,
+  library_type: '名著')
 # . . .
 
 Product.create(title: '红楼梦',
@@ -551,5 +585,6 @@ Product.create(title: '红楼梦',
                               是我国古代长篇小说中的现实主义的高峰。
       </p>},
   image_url: 'images/meng.png',
-  price: 35.36)
+  price: 35.36,
+  library_type: '名著')
 # . . .
