@@ -1,12 +1,12 @@
 
-<h1>Listing orders</h1>
+<h1><%= t('.title') %></h1>
 
-<table>
+<table id="orders_list">
   <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Email</th>
-    <th>Pay type</th>
+    <th><%= t('.name') %></th>
+    <th><%= t('.address') %></th>
+    <th><%= t('.email') %></th>
+    <th><%= t('.paytype') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,17 +18,17 @@
     <td><%= order.address %></td>
     <td><%= order.email %></td>
     <td><%= order.pay_type %></td>
-    <td><%= link_to 'Show', order %></td>
-    <td><%= link_to 'Edit', edit_order_path(order) %></td>
-    <td><%= link_to 'Destroy', order, method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('.show'), order %></td>
+    <td><%= link_to t('.edit'), edit_order_path(order) %></td>
+    <td><%= link_to t('.destroy'), order, method: :delete,
+              data: { confirm: t('.sure') } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Order', new_order_path %>
+<!-- <%= link_to 'New Order', new_order_path %> -->
 
 <p><%= will_paginate @orders %></p>
 

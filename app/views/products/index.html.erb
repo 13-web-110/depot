@@ -1,6 +1,6 @@
-<h1>Listing products</h1>
+<h1><%= t('.title') %></h1>
 
-<table>
+<table id="books_list">
   <% @products.each do |product| %>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
       <td>
@@ -14,10 +14,10 @@
         </dl>
       </td>
       <td class="list_actions">
-        <%= link_to 'Show', product %><br/>
-        <%= link_to 'Edit', edit_product_path(product) %><br/>
-        <%= link_to 'Destroy', product,
-                    confirm: 'Are you sure?',
+        <%= link_to t('.show'), product %><br/>
+        <%= link_to t('.edit'), edit_product_path(product) %><br/>
+        <%= link_to t('.destroy'), product,
+                    confirm: t('.sure') ,
                     method: :delete %>
       </td>
     </tr>
@@ -26,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to t('.new'), new_product_path %>

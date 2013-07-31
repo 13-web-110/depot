@@ -94,10 +94,32 @@ en:
         add_html:    "Add to Cart"
 #START:checkout
   orders:
+    index:
+      title:        "Listing orders"
+      name:         "Name"
+      address:      "Address"
+      email:        "Email"
+      paytype:      "Pay Type"
+      show:         "Show"
+      edit:         "Edit"
+      destroy:      "Destroy"
+      sure:         "Are you sure?"
+    show:
+      name:         "Name"
+      address:      "Address"
+      email:        "Email"
+      paytype:      "Pay Type"
+      edit:         "Edit"
+      back:         "Back"
+    edit:
+      title:        "Editing order"
+      show:         "Show"
+      back:         "Back"
     new:
       title:        "Your Cart"
       total:        "Total"
       legend:       "Please Enter Your Details"
+      back:         "Back"
     form:
       name:         "Name"
       address_html: "Address"
@@ -107,12 +129,38 @@ en:
       submit:       "Place Order"
 #END:checkout
   products:
-      show:
-        add_html:    "Add to Cart"
+    index:
+      title:        "Listing products"
+      show:         "Show"
+      edit:         "Edit"
+      destroy:      "Destroy"
+      sure:         "Are you sure?"
+      new:          "New Product"
+    new:
+      title:        "New Product"
+      back:         "Back"
+    show:
+      edit:         "Edit"
+      back:         "Back"
+      add_html:     "Add to Cart"
+      comments:     "Comments"
+      addcomment:   "Add a comment"
+    edit:
+      title:        "Editing product"
+      show:         "Show"
+      back:         "Back"
+    form:
+      title:        "Title"
+      description:  "Description"
+      image_url:    "Image_url"
+      price:        "Price"
+      library_type: "Library Type"
+      submit:       "Update"
 
   comments:
     form:
       comment_body:    "Comment:"
+      comment:         "OK"
 
   sessions:
     new:
