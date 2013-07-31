@@ -56,7 +56,9 @@ zh:
 #START:layout
   layouts:
     application:
-      title:       "实用书籍"
+      cart_show:   "显示/隐藏购物车"
+      title:       "精品书籍商城"
+      welcome:     "欢迎"
       home:        "首页"
       questions:   "问题"
       news:        "新闻"
@@ -64,6 +66,10 @@ zh:
       sing_up:     "注册"
       sing_in:     "登录"
       category:    "分类"
+      orders:      "订单"
+      products:    "书目"
+      users:       "用户"
+      logout:      "注销"
 #END:layout
 
 #START:cart
@@ -83,9 +89,7 @@ zh:
       title_html:  "书籍目录"
       add_html:    "加入购物车"
       comment:     "评论"
-    like:
-      like:         "赞"
-      cancer_like:  "取消 赞"
+      close:       "关闭"
 #END:main
 
   search:
@@ -109,6 +113,25 @@ zh:
   comments:
     form:
       comment_body:    "评论："        
+
+  sessions:
+    new:
+      legend:          "请登陆"
+      name:            "用户名"
+      password:        "密码"
+      login:           "登陆"
+      back:            "返回"
+
+  users:
+    new:
+      new_title:       "新用户"
+      back:            "返回"
+    form:
+      legend:          "注册信息"
+      name:            "用户名"
+      password:        "密码"
+      confirm:         "确认密码"
+      regist:          "注册"
 
 #START:flash
   thanks:          "感谢您提交的订单"

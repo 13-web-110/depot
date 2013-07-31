@@ -54,7 +54,9 @@ en:
 #START:layout
   layouts:
     application:
-      title:       "Pragmatic Bookshelf"
+      cart_show:   "Show/Hide Cart"
+      title:       "Pragprog Books Online Store"
+      welcome:     "Nice to meet you"
       home:        "Home"
       questions:   "Questions"
       news:        "News"
@@ -62,7 +64,10 @@ en:
       sing_up:     "Sing Up"
       sing_in:     "Sing In"
       category:    "Category"
-      
+      orders:      "Orders"
+      products:    "Products"
+      users:       "Users"
+      logout:      "Logout"
 #END:layout
 
 #START:cart
@@ -82,9 +87,7 @@ en:
       title_html:  "Your Pragmatic Catalog"
       add_html:    "Add to Cart"
       comment:     "Comment"
-    like:
-      like:         "like"
-      caner_like:   "cancer like"
+      close:       "Close"
 #END:main
   search:
       results:
@@ -108,6 +111,26 @@ en:
   comments:
     form:
       comment_body:    "Comment:"
+
+  sessions:
+    new:
+      legend:          "Please Log In"
+      name:            "Name"
+      password:        "Password"
+      login:           "Login"
+      back:            "Back"
+
+  users:
+    new:
+      new_title:       "New user"
+      back:            "Back"
+    form:
+      legend:          "Enter User Details"
+      name:            "Name"
+      password:        "Password"
+      confirm:         "Confirm"
+      regist:          "Regist"
+
 #START:flash
   thanks:          "Thank you for your order"
 #END:flash

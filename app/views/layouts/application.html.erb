@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Pragprog Books Online Store</title>
+		<title><%= t('.title') %></title>
 		<script>
 			// this is important for IEs
 			var polyfilter_scriptpath = '/js/';
@@ -22,7 +22,7 @@
 
 	<% if session[:user_id] %>
 	<div id = "cart_side">
-	  <div id="cart_bar" onclick="toggleCart()" >Show/Hide Cart</div>
+	  <div id="cart_bar" onclick="toggleCart()" ><%= t('.cart_show') %></div>
       <% if @cart %>
         <%= hidden_div_if(true, id: 'cart') do %>
           <%= render @cart %>
@@ -40,11 +40,12 @@
 	    <% end %>
 
 			<% if session[:user_id] %>
-    			<%= link_to 'Logout',	logout_path, class: 'locale' ,method: :delete %>
+
+    			<%= link_to t('.logout'),	logout_path, class: 'locale' ,method: :delete %>
+    			<p class="locale"><%= show_user_name %></p>
   		    <% end %>
 		 	<% unless session[:user_id] %>
       		
-      			
       			<%= link_to t('.sing_up') , new_user_path,class: 'locale'  %>
       			<%= link_to t('.sing_in') , login_url ,class: 'locale'  %>
       			
@@ -66,7 +67,7 @@
 			</div>
 
 			<header>
-				<h1>Pragprog Books Online Store<span>Nice to meet you</span></h1>	
+				<h1><%= t('.title') %><span><%= t('.welcome') %></span></h1>	
 				<nav class="codrops-demos">
 					<%= link_to t('.home'),store_path %>
 					<%= link_to t('.category'),store_category_path %>
@@ -77,9 +78,9 @@
         			
         			<% if session[:admin_id]%>
     				<p></p>
-     				<%= link_to 'Orders',   orders_path   %>
-      				<%= link_to 'Products', products_path %>
-      				<%= link_to 'Users',    users_path    %>
+     				<%= link_to t('.orders'),   orders_path   %>
+      				<%= link_to t('.products'), products_path %>
+      				<%= link_to t('.users'),    users_path    %>
     				<% end %>
     	
    
