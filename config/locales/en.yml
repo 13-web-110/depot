@@ -171,6 +171,22 @@ en:
       back:            "Back"
 
   users:
+    index:
+      title:        "Listing users"
+      name:         "Name"
+      show:         "Show"
+      edit:         "Edit"
+      destroy:      "Destroy"
+      sure:         "Are you sure?"
+    show:
+      name:         "Name"
+      passworddigest: "Password digest"
+      edit:         "Edit"
+      back:         "Back"
+    edit:
+      title:        "Editing user"
+      show:         "Show"
+      back:         "Back"
     new:
       new_title:       "New user"
       back:            "Back"
