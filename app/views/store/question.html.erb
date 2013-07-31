@@ -1,5 +1,306 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<style type="text/css"><!--
 
-<div class = "question">
-	<p> This is Descript question page!</p>
-</div>
+body { background-color: #FFFFFF; }  
+* html body { margin-top: 0px; }
+.serif { font-family: times,serif; font-size: medium; }
+.sans { font-family: verdana,arial,helvetica,sans-serif; font-size: medium; }
 
+.small { font-family: verdana,arial,helvetica,sans-serif; font-size: small; }
+
+.h1 { font-family: verdana,arial,helvetica,sans-serif; color: #E47911; font-size: medium; } 
+.h3color { font-family: verdana,arial,helvetica,sans-serif; color: #E47911; font-size: small; }  
+h2.small {margin-bottom: 0em; }
+h2.h1 { margin-bottom: 0em; }
+h2.h3color { margin-bottom: 0em; }
+.tiny { font-family: verdana,arial,helvetica,sans-serif; font-size: 12px; } 
+.listprice { font-family: arial,verdana,helvetica,sans-serif; text-decoration: line-through; }
+.attention { background-color: #FFFFD5; }
+.price { font-family: verdana,arial,helvetica,sans-serif; color: #990000; }
+.tinyprice { font-family: verdana,arial,helvetica,sans-serif; color: #990000; font-size: 12px; } 
+.highlight { font-family: verdana,arial,helvetica,sans-serif; color: #990000; font-size: small; } 
+.alertgreen { color: #009900; font-weight: bold; }
+.active-nav { background-color: #000000; color: #FFFFFF; }
+.inactive-nav { background-color: #FFFFFF; color: #000000; }
+.tigerBox .head { border: 1px solid #CCCC99; border-bottom-width: 0px; background-color: #EEEECC; }
+.tigerBox .body { border: 1px solid #CCCC99; }
+.tigerBoxWithEyebrow .head { border-width: 0px; }
+.tigerBoxWithEyebrow .body { border: 1px solid #CCCC99; }
+.detailPageTigerBox .head { border-width: 0px; }
+.detailPageTigerBox .body { border: 1px solid #CCCC99; }
+.detailPageTigerBox .darkCell { background-color: #EEEECC; }
+.eyebrow { font-family: verdana,arial,helvetica,sans-serif; font-size: 10px; font-weight: bold; text-transform: uppercase; text-decoration: none; color: #FFFFFF; }
+div#page-wrap { min-width: 980px; }
+div#leftcol, div#leftcolhidden { float: left; width: 180px; margin:5px 0px 0px 5px; display: inline; }
+
+div#rightcol, div#rightcolhidden { float: right; width: 300px; margin-top:5px; }
+
+div#leftcolhidden { clear:left; }
+div#rightcolhidden { clear:right; }
+div#center1, div#centercol, div#centerrightspancol { overflow: hidden; }
+* html div#center1 { width: 100%; }
+
+* html div#centercol { width:100%; }
+* html div#centerrightspancol { width: 100%; }
+div#page-footer { clear: both; }
+* html div#page-wrap { border-right: 980px solid #fff; width: 100%; margin-right: 25px; }
+* html div#content { float: left; position:relative; margin-right: -980px; }
+a:active { font-family: verdana,arial,helvetica,sans-serif; color: #FF9933; }
+a:visited { font-family: verdana,arial,helvetica,sans-serif; color: #996633; }
+a:link { font-family: verdana,arial,helvetica,sans-serif; color: #004B91; }
+a.noclick, a.noclick:visited { color: #000000; }
+.noLinkDecoration a { text-decoration: none; border-bottom: none; }
+.noLinkDecoration a:hover { text-decoration: underline; }
+.noLinkDecoration a.dynamic:hover { text-decoration: none; border-bottom: 1px dashed; }
+.noLinkDecoration a.noclick:hover { color: #000000; text-decoration: none; border-bottom: 1px dashed; }
+
+.amabot_right .h1 { color: #E47911; font-size: .92em; }
+.amabot_right .amabot_widget .headline, .amabot_left .amabot_widget .headline { color: #E47911; font-size: .92em; display: block; font-weight: bold; }
+.amabot_widget .headline { color: #E47911; font-size: medium; display: block; font-weight: bold; }
+.amabot_right .amabot_widget { padding-top: 8px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; border-bottom: 1px solid #C9E1F4; border-left: 1px solid #C9E1F4; border-right: 1px solid #C9E1F4; border-top: 1px solid #C9E1F4; }
+.amabot_left .h1 { color: #E47911; font-size: .92em; }
+.amabot_left .amabot_widget { padding-top: 8px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; border-bottom: 1px solid #C9E1F4; border-left: 1px solid #C9E1F4; border-right: 1px solid #C9E1F4; border-top: 1px solid #C9E1F4; }
+
+.amabot_center div.unified_widget, .amabot_center .amabot_widget { font-size: 12px; }
+.amabot_right div.unified_widget, .amabot_right .amabot_widget { font-size: 12px; }
+.amabot_left div.unified_widget, .amabot_left .amabot_widget { font-size: 12px; }
+
+.nobullet { list-style-type: none; }
+.homepageTitle { font-size: 28pt; font-family: 'Arial Bold', Arial, sans-serif; font-weight: 800; font-variant: normal; color: #80B6CE; line-height:1em; }
+.tigerbox { padding-top: 8px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; border-bottom: 1px solid #C9E1F4; border-left: 1px solid #C9E1F4; border-right: 1px solid #C9E1F4; border-top: 1px solid #C9E1F4; }
+.hr-leftbrowse { border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: dashed; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-color: #999999; border-right-color: #999999; border-bottom-color: #999999; border-left-color: #999999; margin-top: 10px; margin-right: 5px; margin-bottom: 0px; margin-left: 5px; }
+div.unified_widget p { margin:0 0 0.5em 0; line-height:1.4em; }
+
+div.unified_widget h2 { color: #E47911; padding:0; }
+
+.amabot_right div.unified_widget .headline, .amabot_left div.unified_widget .headline { color: #E47911; font-size: .92em; display: block; font-weight: bold; }
+div.unified_widget .headline { color: #E47911; font-size: medium; display: block; font-weight: bold; }
+div.unified_widget sup { font-weight:normal; font-size: 75%; }
+div.unified_widget h2 sup { font-size: 50%; }
+
+td.amabot_left div.unified_widget h2, td.amabot_right div.unified_widget h2, div.amabot_left div.unified_widget h2, div.amabot_right div.unified_widget h2 { font-size:100%; margin:0 0 0.5em 0; }
+td.amabot_center div.unified_widget h2, div.amabot_Center div.unified_widget h2 { font-size:135%; font-weight:bold; margin:0 0 0.35em 0px; }
+td.amabot_center, div.amabot_center { padding:5px 15px 5px 10px; }
+div.unified_widget ul { margin: 1em 0; padding: 0 0 0 15px; list-style-position:inside; }
+
+div.unified_widget ol { margin:0; padding:0 0 0 2.5em; }
+
+div.unified_widget a:link, div.unified_widget a:visited { text-decoration:underline; }
+div.unified_widget a:hover { text-decoration:underline; }
+div.unified_widget p.seeMore { clear:both; font-family:verdana,arial,helvetica,sans-serif; margin:0; padding-left:1.15em; text-indent: -1.15em; font-size:100%; font-weight:normal; }
+div.unified_widget p.seeMore a:link, div.unified_widget p.seeMore a:visited { text-decoration:underline; }
+div.unified_widget p.seeMore a:hover { text-decoration: underline; }
+div.unified_widget .carat, div.left_nav .carat { font-weight:bold; font-size:120%; font-family:verdana,arial,helvetica,sans-serif; color: #E47911; margin-right:0.20em; }
+div.unified_widget a img { border:0; }
+
+div.h_rule { clear:both; }
+div#centerrightspancol div.h_rule { clear:right; }
+div.unified_widget { margin-bottom:2em; clear:both; }
+div.unified_widget div.col1 { width: 100%; }
+div.unified_widget div.col2 { width: 49%; }
+div.unified_widget div.col3 { width: 32%; }
+div.unified_widget div.col4 { width: 24%; }
+div.unified_widget div.col5 { width: 19%; }
+div.unified_widget table { border:0; border-collapse:collapse; width:100%; }
+div.unified_widget td { padding:0 8px 8px 0; vertical-align:top; }
+div.unified_widget table.col1 td { width:100%; }
+div.unified_widget table.col2 td { width:49%; }
+div.unified_widget table.col3 td { width:32%; }
+div.unified_widget table.col4 td { width:24%; }
+div.unified_widget table.col5 td { width:19%; }
+div.unified_widget td.bottom { vertical-align:baseline; }
+div.unified_widget table h4, div.unified_widget h4 { color: #000; font-size:100%; font-weight:normal; margin:0; padding:0; }
+div.rcmBody div.prodImage, amabot_widget div.prodImage {float:left; margin:0px 0.5em 0.25em 0px; }
+
+td.amabot_right div.unified_widget, td.amabot_left div.unified_widget, div.amabot_right div.unified_widget, div.amabot_left div.unified_widget { border:1px solid #C9E1F4; padding:8px; margin-bottom:20px; }
+
+* html td.amabot_right div.unified_widget, * html div.amabot_right div.unified_widget { height:100%; }
+* html td.amabot_left div.unified_widget, * html div.amabot_left div.unified_widget { height:100%; }
+
+div.rcmBody, amabot_widget div.rcmBody { line-height:1.4em; }
+div.rcmBody a:link, div.rcmBody a:visited { text-decoration: underline; }
+
+div.rcmBody p.seeMore, amabot_widget div.rcmBody p.seeMore { margin-top:0.5em; }
+div.rcmBody div.bannerImage { text-align:center; }
+div.rcmBody h2 span.homepageTitle { display:block; margin-bottom:-0.3em; margin-top:-0.12em; line-height:1em; }
+div.rcmBody h2 img { float:none; }
+table.coopTable div.rcmBody .headline { font-size: 110%; }
+table.coopTable div.rcmBody h2 { font-size: 110%; font-weight:bold; }
+table.promo div.rcmBody h2 { font-size: 100%; font-weight:bold; }
+div.blurb div.title { font-weight:bold; padding-top:5px; padding-bottom:2px; }
+
+div.left_nav { font-family: Arial, sans-serif; font-size:100%; margin:0; line-height:1.05em; width:100%; border:1px solid #C9E1F4; padding-bottom:10px; }
+div.left_nav h2 { margin:0 0 0 0; color: #000000; font-weight:bold; line-height:1.25em; font-size:100%; font-family:verdana,arial,helvetica,sans-serif; padding: 3px 6px; background-color: #EAF3FE; }
+div.left_nav h3 { font-family:verdana,arial,helvetica,sans-serif; margin:0.5em 0 0.4em 0.5em; color: #E47911; font-weight:bold; line-height:1em; font-size:100%; padding-right:0.5em; }
+div.left_nav ul { margin:0; padding:0; }
+div.left_nav li, div.left_nav p { list-style:none; margin:0.5em 0.5em 0 1em; line-height:1.2em; }
+
+div.left_nav hr { margin: 1em 0.5em; border-top:0; border-left:0; border-right:0; border-bottom: 1px dashed #cccccc; }
+
+div.left_nav a:link, div.left_nav a:visited { color: #003399; text-decoration:none; font-family:Arial, sans-serif; } 
+div.left_nav a:hover { color: #2a70fc; text-decoration:underline; }
+div.left_nav p.seeMore { padding-left:0.9em; text-indent:-0.9em; margin-top:0.35em; margin-bottom:1em; }
+
+div.left_nav p.seeMore a:link, div.left_nav p.seeMore a:visited { text-decoration:none; }
+div.left_nav p.seeMore a:hover { text-decoration:underline; }
+div.asinItem { float:left; margin-bottom:1em; width:32%; }
+div.asinTextBlock { padding:0 8px 8px 0; }
+div.asinItem div.prodImage { height:121px; display:table-cell; vertical-align:bottom; }
+div.asinItem div.localImage { display:table-cell; vertical-align:bottom; }
+
+div.asinItem span { margin: 0.5em 0 0.25em 0; }
+div.asinItem ul { margin:0; padding:0 0 0.5em 1.3em; text-indent:-1.3em; }  
+
+div.asinTitle {padding-top:3px; padding-bottom:2px; }
+div.row { clear:both; }
+body.dp {}
+body.dp div.h_rule { clear:none; }
+body.dp div.unified_widget { clear:none; }
+div.asinCoop div.asinItem { float:none; width:100%; }
+div.asinCoop_header {}
+div.asinCoop_footer {}
+
+div.newAndFuture div.asinItem ul { font-size:100%; }
+div.newAndFuture div.asinItem li { list-style-position: outside; margin:0 0 0.35em 20px; padding:0; text-indent: 0; }
+div.newAndFuture h3 { font-size:100%; margin:1em 0 ; }
+div.newAndFuture a:link, div.newAndFuture a:visited { text-decoration:underline; }
+div.newAndFuture a:hover { text-decoration:underline; }
+div.newAndFuture p.seeMore { margin:-0.75em 0 0 35px; }
+
+div.unified_widget ol.topList { margin: 0; padding: 0; list-style: none; }
+div.unified_widget ol.topList li { list-style: none; clear: both; display: list-item; padding-top: 6px; }
+div.unified_widget ol.topList .productImage { display: block; float: left;vertical-align: top;text-align: center;width:60px; }
+div.unified_widget ol.topList .productText { display: block; float: left; padding-left:10px; vertical-align: top; }
+:root div.unified_widget span.productImage { display: table-cell; float: none; }
+:root div.unified_widget span.productText { display: table-cell; float: none; }
+div.unified_widget dl.priceBlock {margin:0 0 0.45em 0; }
+div.unified_widget dl.priceBlock dt {clear:left; font-weight:bold; float:left; margin:0 0.3em 0 0; }
+div.unified_widget dl.priceBlock dd {margin:0 0 0.2em 0; }
+div.unified_widget .bold {font-weight:bold; }
+div.unified_widget .byline { font-weight: normal; } 
+table.thirdLvlNavContent div.blurb {margin:10px; }
+
+div.pageBanner h1 { font-family:Microsoft Yahei,Arial,Helvetica,sans-serif;
+ font-weight:normal; font-size:30px; color: #e47911;
+ letter-spacing:6px; padding:0 0 5px 0; margin:0; } 
+div.pageBanner p { color: #888888; margin: 0; } 
+
+div.pageBanner h1.bkgnd { background-repeat:no-repeat; background-color: #FFFFFF; overflow:hidden; text-indent:-100em; }
+INPUT { font-family: fixed; }
+BODY { font-family: verdana,arial,helvetica,sans-serif; font-size: small; }
+TD { font-family: verdana,arial,helvetica,sans-serif; font-size: small; }
+TH { font-family: verdana,arial,helvetica,sans-serif; font-size: small; }
+.rhfWrapper .shoveler ul li { font-size: 12px; }
+--></style>
+<link rel="stylesheet" type="text/css" href="http://g-ec4.images-amazon.com/images/G/01/browser-scripts/fruitCSS/CN-combined-2168223829._V379596119_.css" />
+<style>
+#help_srch_sggst {
+   width: 260px;
+   left: 0;
+   top: 28px;
+   text-align: left;
+}
+</style>
+<link type='text/css' href='http://g-ec4.images-amazon.com/images/G/01/browser-scripts/cn-site-wide-css-beacon/site-wide-8150437343._V1_.css' rel='stylesheet'>
+<link type='text/css' href='http://g-ec4.images-amazon.com/images/G/01/browser-scripts/wcs-css-buttons/wcs-css-buttons-2172471701._V1_.css' rel='stylesheet'>
+<link type='text/css' href='http://g-ec4.images-amazon.com/images/G/01/browser-scripts/wcs-help-base/wcs-help-base-1653315911._V1_.css' rel='stylesheet'>
+<link type='text/css' href='http://g-ec4.images-amazon.com/images/G/01/browser-scripts/wcs-help-cn-overrides/wcs-help-cn-overrides-4214869780._V1_.css' rel='stylesheet'>
+<style type="text/css">
+
+/* non-sprited */
+.ap_popover_unsprited .ap_body   .ap_left   { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_left_17._V248144977_.png); }
+.ap_popover_unsprited .ap_body   .ap_right  { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_right_17._V248144978_.png); }
+.ap_popover_unsprited .ap_header .ap_left   { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_top_left._V265110087_.png); }
+.ap_popover_unsprited .ap_header .ap_right  { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_top_right._V265110087_.png); }
+.ap_popover_unsprited .ap_header .ap_middle { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_top._V265110086_.png); }
+.ap_popover_unsprited .ap_footer .ap_left   { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_bottom_left._V265110084_.png); }
+.ap_popover_unsprited .ap_footer .ap_right  { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_bottom_right._V265110087_.png); }
+.ap_popover_unsprited .ap_footer .ap_middle { background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/po_bottom._V265110084_.png); }
+
+/* Everything else -- sprited */
+.ap_popover_sprited .ap_body .ap_left, 
+.ap_popover_sprited .ap_body .ap_right {
+    background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/light/sprite-v._V219326282_.png);
+}
+
+
+.ap_popover_sprited .ap_header .ap_left, 
+.ap_popover_sprited .ap_header .ap_right,
+.ap_popover_sprited .ap_header .ap_middle,
+.ap_popover_sprited .ap_footer .ap_left, 
+.ap_popover_sprited .ap_footer .ap_right,
+.ap_popover_sprited .ap_footer .ap_middle,
+.ap_popover_sprited .ap_closebutton {
+    background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/light/sprite-h._V219326280_.png);
+}
+
+.ap_popover_sprited .ap_body .ap_right-arrow, .ap_popover_sprited .ap_body .ap_left-arrow {
+    background-image: url(http://g-ec4.images-amazon.com/images/G/01/javascripts/lib/popover/images/light/sprite-arrow-v._V219326281_.png);
+}
+
+</style>
+
+
+<!-- EndNav -->
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="cs-help-page">
+  <tr>
+ <td align="center" valign="top" class="center-col"><h1>热点问题<br></h1><table align="center"><tbody><tr><td align="left" width="224"><h2>关于商品的问题</h2></td><td align="left" width="10">&nbsp;</td><td align="left" width="224"><h2>如何查看包裹情况</h2></td><td align="left" width="10">&nbsp;</td><td align="left" width="220"><h2>支付问题</h2></td><td align="left" width="10">&nbsp;</td><td align="center" width="236"><h2>发票问题</h2></td></tr></tbody></table>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <table align="center"><tbody><tr><td align="left" width="224"><a href="#5" target="_self">图书商品问题？</a></td><td align="left" width="10">&nbsp;</td><td align="left" width="224"><a href="#1" target="_self">什么时间送达？</a></td><td align="left" width="10">&nbsp;</td><td align="left" width="220"><a href="#13" target="_self">货到付款现金的支付问题？</a></td><td align="left" width="10">&nbsp;</td><td align="left" width="236"><a href="#18" target="_self">下订单时，没有选择发票？</a></td></tr><tr><td align="left" width="224"><a href="#6" target="_self">大家电验货,签收及安装？</a></td><td align="left">&nbsp;</td><td align="left" width="224"><a href="#2" target="_self">什么时间发货？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#14" target="_self">咨询国内银行卡在线支付？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#19" target="_self">下订单时，已经选择了发票？</a></td></tr><tr><td align="left"><a href="#7" target="_self">如何删除商品？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#3" target="_self">未收到配送延误的通知？</a></td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr><tr><td align="left"><a href="#8" target="_self">如何查询订单金额？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#4" target="_self">缺货和预售商品什么时间到货？</a></td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr><tr><td align="left"><a href="#9" target="_self">我购买的商品的数量是多少？</a></td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="center">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr></tbody></table><br>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <table align="center"><tbody><tr><td align="left" width="224"><h2>配送费及范围问题</h2></td><td align="left" width="10">&nbsp;</td><td align="left" width="224"><h2>送货方式、拒收问题</h2></td><td align="left" width="10">&nbsp;</td><td align="left" width="220"><h2>退换货及退款问题</h2></td><td align="left" width="10">&nbsp;</td><td align="center" width="236"><h2>入驻卖家、售后问题</h2></td></tr></tbody></table>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; <table align="center"><tbody><tr><td align="left" width="224"><a href="#10" target="_self">如何免收配送费？</a></td><td align="left" width="10">&nbsp;</td><td align="left" width="224"><a href="#16" target="_self">关于快递送货上门的问题？</a></td><td align="left" width="10">&nbsp;</td><td align="left" width="220"><a href="#20" target="_self">我需要换货？</a></td><td align="left" width="10">&nbsp;</td><td align="left" width="236"><a href="#24" target="_self">入驻卖家配送问题？</a></td></tr><tr><td align="left" width="224"><a href="#11" target="_self">我的地址是否在配送范围内？</a></td><td align="left">&nbsp;</td><td align="left" width="224"><a href="#17" target="_self">如何选择拒收商品？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#21" target="_self">我需要退货？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#25" target="_self">入驻卖家退换货问题？</a></td></tr><tr><td align="left"><a href="#12" target="_self">查询配送方式或配送公司电话？</a></td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left"><a href="#22" target="_self">查询退换货政策？</a></td><td align="left">&nbsp;</td><td align="left"><a href="#26" target="_self">如何查询售后联系电话？</a></td></tr><tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left"><a href="#23" target="_self">如何查询我的退款？</a></td><td align="left">&nbsp;</td><td align="center">&nbsp;</td></tr></tbody></table><p>&nbsp;</p><h3><a name="1" id="1"></a>1、什么时间送到？</h3><p>如您的订单一直显示"尚未发货"状态，此时可能遇到了以下几种情况： <br></p><p>*为了使得您能收到满意的商品，如果我们的工作人员在备货期间发现异常如出现商品破损等状况从而需要从其他库房为您调货时，订单状态也会一直显示"尚未发货"。<br></p>
+ <p>*您订购的商品需要调货：您在订购时看到的页面上显示"商品有货"为"全国库存"状况。有可能您订单的商品在您指定的收货地址就近的库房无货，那么ROR将从其他地区的库房为您调货。在商品调货至您所在地的库房并且完成检验之前订单状态会一直显示"尚未发货"。<br></p><p>如您的订单一直呈现"即将发货"或"已从库房发出"状态时，请您耐心等待，并及时关注您的"预计送达日期"。<br>&nbsp; <br></p><h3><a name="2" id="2"></a>2、什么时间发货</h3><p>如您的订单一直显示"尚未发货"状态，此时可能遇到了以下几种情况： <br></p><p>*为了使得您能收到满意的商品，如果我们的工作人员在备货期间发现异常如出现商品破损等状况从而需要从其他库房为您调货时，订单状态也会一直显示"尚未发货"。<br></p>
+ <p>*您订购的商品需要调货：您在订购时看到的页面上显示"商品有货"为"全国库存"状况。有可能您订单的商品在您指定的收货地址就近的库房无货，那么ROR将从其他地区的库房为您调货。在商品调货至您所在地的库房并且完成检验之前订单状态会一直显示"尚未发货"。</p><p>&nbsp;</p><h3><a name="3" id="3"></a>3、未收到配送延误的通知（邮件/短信）</h3><p>您可以点击"我的订单"—"跟踪您的包裹"—"参阅完整跟踪历史"查询包裹的配送状态及配送公司的联系方式，与配送公司确认您的包裹配送问题。</p><p>&nbsp;</p><h3><a name="4" id="4"></a>4、缺货和预售商品什么时间到货？</h3>
+ <p>ROR正在为您积极地寻找货源，您可以在我的订单查看到订单的预计送达日期。如果未能按时到货，我们将及时地邮件通知您，并给您最新的预计送达日期。请您耐心等待。</p><p>&nbsp;</p><h3><a name="5" id="5"></a>5、图书类商品的问题？</h3><p>如果您需要了解商品是否销售，请您通过商品搜索栏输入您需要购买商品的名称进行搜索查询，并可以在商品详细页面查看到商品的详情参数。如果查询未果，则表示目前我们没有此商品的销售记录。</p><p>如果您无法订购多个数量的同一商品，是由于您所购买的商品是以低利润或负利润销售，为了让更多客户能够享受到此优惠，因此系统限制了购买数量。</p><h3>&nbsp;</h3><h3><a name="6" id="6"></a>6、大家电如何验货,签收及安装？</h3><p>如您需要办理空调的安装业务，请按照商品页面的报装或售后电话取得联系，厂家会为您安排上门安装事宜。（+费用说明）</p>
+ 从ROR订购的大家电商品不能自行开箱验货， 商品签收后，请您直接联系厂家售后人员安排上门开箱安装调试，如安装时发现有质量问题，请要求厂家售后人员现场出具质量检测报告，若厂家不能出具质量检测报告（有些品牌，如空 调类商品的售后检测和安装是分开的），请您直接联系厂家售后部门，厂家售后部门会安排人员上门检测，请您凭质量检测报告，并根据"发送检测报告说明"发送至客服中心办理退换货事宜。
+ <h3><a name="7" id="7"></a>7、如何删除商品？</h3><p>如果您的订单包裹状态为"尚未发货" ：可以通过点击右侧"取消商品"按钮取消您不需要的商品。（无法删减同一商品的数量）</p><p>如果您需要删减同一商品的数量，请您取消该商品后重新订购您需要某一数量的商品。</p><p>如果您的订单包裹状态为"即将发货"或"已从库房发出"：无法通过系统或人工取消商品。建议您若不再需要该订单的商品，请于商品送达后选择拒收或收货后在线办理退换货。</p><p>&nbsp;</p><h3><a name="8" id="8"></a>8、如何查询订单金额？</h3>
+ <p>① 您可以通过点击ROR网站右上角"我的帐户"—"我的订单"查看您订单中的金额。</p><p>② 如果您订购的是入驻卖家商品，那么会根据不同的入驻卖家收取一定的配送费。</p><p>③ 由于您的订单可能分多个包裹配送，因此您所支付的金额仅为已发出商品的金额。如果您对您支付的金额有疑问，请您在订单商品全部收货后合计订单总金额，是否与您支付的金额相符。</p><p>④ 如果您支付了赠品的部分费用，请您放心，该费用已在未送达的包裹中扣除，可以保证您支付的金额与订单金额完全一致。</p><p>&nbsp;</p><h3><a name="9" id="9"></a>9、我购买的商品的数量是多少？</h3>
+ <p>您可以通过点击ROR网站右上角"我的帐户"—"我的订单"查看购买的商品数量。</p><p>如果您需要购买多件商品而无法订单，原因则是由于您所购买的商品是以低利润或负利润销售，为了让更多客户能够享受到此优惠，因此系统限制了购买数量。</p><h3>&nbsp;</h3><h3><a name="10" id="10"></a>10、如何才能免收配送费？</h3><p>购买29元以上（含29元）合格商品，即可享受免费配送;若合格商品不满29元，则需要支付5元配送费。</p><p>&nbsp;</p><h3><a name="11" id="11"></a>11、我的地址是否在配送范围内？</h3><p>① 您可以通过商品详细页面中商品价格下方，选择您需要配送到的配送区域。如果您选择的配送区域不在我们的配送范围之内，页面会给予相应的红色字体提示。</p><p>② 您也可以根据收货人地址按照不同地区分布，查看您需要配送到的配送区域。</p><p>&nbsp;</p><h3><a name="12" id="12"></a>12、查询订单的配送方式或配送公司电话？</h3><p>当您的订单状态为"已从库房发出"时，您可点击<strong>"跟踪您的包裹"</strong>查询包裹的配送状态及配送公司的联系方式。</p><p>如果此时您点击<strong>"参阅完整跟踪历史"</strong>，仍未能查询到配送公司的联系方式，此代表您的商品正在从库房发往配送站的途中，请您耐心等待。<br></p><p>&nbsp;</p><h3><a name="13" id="13"></a>13、货到付款现金的支付问题？</h3><p>配送员将商品送到时，您需要以现金/POS机方式付款。如果订单金额高于20000元，则不支持现金支付方式。</p><p>货到付款的退款将会退至您的礼品卡帐户，您可以在"我的帐户"-"查看礼品卡余额"中进行查询。</p><p>&nbsp;</p><h3><a name="14" id="14"></a>14、咨询国内银行卡在线支付问题</h3><p>如果您已经完成了支付，但页面仍显示"尚未支付"，请您在确认银行扣款成功后尝试刷新页面。</p><p>&nbsp;</p><h3><a name="15" id="15"></a>15、如何查询付款方式？</h3><p>您可以通过"我的帐户"—"我的订单"—"查看订单明细"查看到您当前订单的支付方式。</p><p>&nbsp;</p><h3><a name="16" id="16"></a>16、关于快递送货上门的问题？</h3>
+ <p>目前ROR只针对部分城市开放快递上门服务，您可以通过查询您需要配送的区域是否支持快递送货上门。</p><p>如果您已订购商品，您可以通过"我的订单"-"追踪您的包裹"-"参阅完整跟踪历史"查看并追踪您的包裹。</p>如果您的包裹提示超出配送范围，您可以根据"我的订单"-"追踪您的包裹"-"参阅完整跟踪历史"与配送公司 取得联系，确认包裹的具体问题。<p>&nbsp;</p><h3><a name="17" id="17"></a>17、如何选择拒收商品？</h3><p>在您签收包裹之前，都可以选择拒收整个包裹。<br>&nbsp;&nbsp;&nbsp; <br>
+   &nbsp; 【温馨提示】目前，ROR不支持拒收包裹中的部分商品。<br>&nbsp; <br>
+   &nbsp; 当配送员为您配送包裹时，您只需要告知配送员"不需要此商品"即可，无须其他操作。如果您已经完成了包裹支付，您所支付的金额将会在商品返回ROR库房后为您办理退款，请您耐心等待！</p><p>&nbsp;</p><h3><a name="18" id="18"></a>18、下订单时，没有选择发票</h3><p>您可以选择任一种形式补开发票：<strong>自助补开发票</strong><strong> VS </strong><strong>传统补开发</strong><strong>票</strong></p>
+   <p>自助补开发票：只需要待包裹状态变成"已从库房发货"后,在"我的帐户"—"我的订单"中自助办理即可。<br></p>
+   <p>传统补开发票     ：请按照固定表格形式将您的信息填写清楚，并将此表格以邮件的形式发送至：cn-invoice@ror.cn&nbsp; ，或传真至：400-881-XXXX联系我们。<br>
+   </p>
+   <p>补开发票将以平邮的形式为您发出。在您提交申请后7-14天为您送达，请您耐心等待。</p><p>&nbsp;</p><h3><a name="19" id="19"></a>19、下订单时，已经选择了发票</h3>
+   <p>您可以选择补开发票，按照固定表格形式将您的信息填写清楚，并将此表格以邮件的形式发送至：cn-invoice@ror.cn&nbsp; ，或传真至：400-881-XXXX联系我们。</p><p>补开发票将以平邮的形式为您发出。在您提交申请后7-14天为您送达，请您耐心等待。</p><p>&nbsp;</p><h3><a name="20" id="20"></a>20、我需要换货？</h3>
+   <p>① 首先，请您先确认所购买的商品是ROR自营商品还是入驻卖家商品？<br></p>
+   <p>② 其次，请您确认所需要换货的商品是否符合ROR退换货政策？<br></p><p>③ 最后<br>
+     &nbsp;<strong>如果您购买的是ROR自营商品，需要换货，您可以有以下几项选择：</strong><br>
+     • 您可以选择"在线自助退换货"进行自助换货。<br>
+     • 如果您订购的商品不符合在线自助退换货，请您根据商品退换货政策，联系ROR客服进行办理。<br></p>
+   <p><strong>如果您购买的是入驻卖家（ROR物流）商品：</strong><br>• 您可以先根据商品退货政策将商品进行退货处理，再重新下单购买需要换货的商品。<br></p><p><strong>如果您购买的是入驻卖家（由卖家销售及配送）商品：</strong><br>
+     • 请您在收到商品的14天内直接联系入驻卖家（由卖家销售和配送），并告知入驻卖家（由卖家销售和配送）商品的问题。入驻卖家会与您针对 换货问题进行协商。<br>
+     • 您可以使用入驻卖家的自助退换货服务。一般入驻卖家会在48小时内查看并给予反馈。</p><p><br></p><h3><a name="21" id="21"></a>21、我需要退货？</h3>
+   <p>① 首先，需要您先确认所购买的商品是ROR自营商品还是入驻卖家商品？<br></p>
+   <p>② 其次，请您确认所需要换货的商品是否符合ROR退换货政策？<br></p><p>③ 最后<br></p>
+   <p><strong>如果您购买的是ROR自营商品，需要退货，您可以有以下几项选择：</strong><br></p>
+   <p>• 您可以选择"在线自助退换货"进行自助退货。<br></p>
+   <p>• 如果您订购的商品不符合在线自助退换货，请您根据商品退换货政策，联系ROR客服进行办理。<br></p>
+   <p><strong>如果您购买的是入驻卖家（ROR物流）商品：</strong><br></p>
+   <p>• 如果您选购的ROR物流配送的商品符合退货政策，您可以将商品退回，退货ROR会将商品相应的款项退至您的礼品卡帐户或原支付帐户中。</p>
+   <p>• 如果您选购的ROR物流配送的商品符合退货政策，也可以通过自助退货服务办理。</p>
+   <p>• 由ROR物流配送的入驻卖家商品，退货时请将相应发票直接退还给入驻卖家。（如您需要确认发票抬头及内容，请直接联系入驻卖家，您可以在商品详细页面查询卖家信息，如没有卖家信息，您可以联系我们。）</p><p><strong>如果您购买的是入驻卖家（由卖家销售及配送）商品：</strong><br></p>
+   <p>• 请您在收到商品的14天内直接联系入驻卖家（由卖家销售和配送），并告知入驻卖家（由卖家销售和配送）商品的问题。入驻卖家会与您针对 换货 问题进行协商。请注意，从ROR入驻卖家（由卖家销售和配送）购买的商品，退货时，请将商品直接退还给卖家，而不是退还给ROR。<br></p><p>• 您可以使用入驻卖家的自助退换货服务。一般入驻卖家会在48小时内查看并给予反馈。</p><p>&nbsp;</p><h3><a name="22" id="22"></a>22、我要查询退换货政策？</h3>
+   <p>ROR承诺除部分特殊商品外，自商品送达时间起30日内，如商品及包装保持ROR出售时原状且配件齐全，我们将提供全款退货的服务。根据各种商品的特性不同，退货政策具体实施细则存在差异。</p><p>&nbsp;</p><h3><a name="23" id="23"></a>23、我使用国内银行网银支付，退款是否成功？</h3><p>您可以在"我的帐户"-"在线支付交易记录"-"在线支付订单/查询在线退款"中查看历史交易记录追踪退款信息。</p><p>&nbsp;</p><h3><a name="24" id="24"></a>24、入驻卖家配送问题？</h3>
+   <p>① 如果您订购的是入驻卖家（由ROR配送）的商品，您可以在"我的订单"—"追踪您的包裹"中查看到包裹的。</p><p>② 如果您订购的是入驻卖家（由卖家销售及配送）的商品，您可以在"我的订单"—"联系卖家"查询到卖家发货的快递单号，进行追踪。</p>
+   如果无法查询到快递单号，请您直接联系卖家。
+   <p></p><p>&nbsp;</p><h3><a name="25" id="25"></a>25、入驻卖家退换货问题？</h3>
+   <p><strong>如果您购买的是入驻卖家（ROR物流）商品：</strong><br></p>
+   <p>• 如果您选购的ROR物流配送的商品符合退换货政策，您可以将商品退回，退货后ROR会将商品相应的款项退至您的礼品卡帐户或原支付帐户中。</p>
+   <p>• 如果您选购的ROR物流配送的商品符合退换货政策，也可以通过自助退换货服务办理。</p>
+   <p>• 由ROR物流配送的入驻卖家商品，退货时请将相应发票直接退还给入驻卖家。（如您需要确认发票抬头及内容，请直接联系入驻卖家，您可以在商品详细页面查询卖家信息，如没有卖家信息，您可以联系我们。）</p><p><strong>如果您购买的是入驻卖家（由卖家销售及配送）商品：</strong><br></p>
+   <p>• 请您在收到商品的14天内直接联系入驻卖家（由卖家销售和配送），并告知入驻卖家（由卖家销售和配送）商品的问题。入驻卖家会与您针对 换货 问题进行协商。请注意，ROR入驻卖家（由卖家销售和配送）购买的商品，退货时，请将商品直接退还给卖家，而不 是退还给ROR。<br></p><p>• 您可以使用入驻卖家的自助退换货服务。一般入驻卖家会在48小时内查看并给予反馈。</p><p>&nbsp;</p><h3><a name="26" id="26"></a>26、查询售后联系电话</h3><p>① 您可以在商品页面下方的"商品特性"中查看到商品品牌的售后联系方式。</p>
+   <p>② 您可以通过ROR页面上方的"帮助"—“售后服务专区&quot;中查看到某些商品品牌的售后联系方式。</p>
+ 
+   
+   <div style="display:none;" id="cf-div"> 
+     <img onload="if (typeof uet == 'function') { uet('cf'); }" src="http://g-ec4.images-amazon.com/images/G/28/x-locale/common/transparent-pixel._V386947693_.gif" width="1" alt="" height="1" border="0" /><img onload="if (typeof uet == 'function') { uet('cf'); }" src="http://ec4.images-amazon.com/images/G/28/x-locale/common/transparent-pixel._V386947693_.gif" width="1" alt="" height="1" border="0" />
+     </div>                                                                                                                                      
+ </td>
+ </tr>
+ <tr height="1">
+   <td height="1" align="left"><img src="http://g-ec4.images-amazon.com/images/G/28/x-locale/common/transparent-pixel._V386947693_.gif" width="500" height="1" border="0" /></td>
+  </tr>
+ </table>
+ </body>
+ </html>
