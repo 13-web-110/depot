@@ -58,7 +58,7 @@ zh:
     application:
       title:       "实用书籍"
       home:        "首页"
-      question:   "问题"
+      questions:   "问题"
       news:        "新闻"
       contact:     "联系我"
       sing_up:     "注册"

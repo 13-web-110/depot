@@ -12,14 +12,26 @@
 #cart_side
 {
 	position: fixed;
-	top: 1em;
-	left: 1em;
-	background-color: #fff;
-	padding: 1em;
+	bottom: 0px;
+	right: 1em;
+	background-color: rgb(230,126,34);
 	z-index: 2;
+	width:250px;
+}
+
+#cart_bar
+{
+	font-size: 2em;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#cart
+{
+	padding: 10px;
 }
 
 #cart_side .button_to
 {
-	float: right;
+	float: left;
 }
