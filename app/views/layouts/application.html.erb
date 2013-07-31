@@ -15,35 +15,38 @@
  		<%= csrf_meta_tags %>
 	</head>
 	<body class="<%= controller.controller_name %>" >
-  <div id="banner">
 
-    <%= form_tag store_path,method: :get, class: 'locale' do %>
-      <%= select_tag 'set_locale', 
-        options_for_select(LANGUAGES, I18n.locale.to_s),
-        onchange: 'this.form.submit()' %>
-      <%= javascript_tag "$('.locale input').hide()" %>
-    <% end %>
-
-    <%= form_tag search_path, :method => :get, :onsubmit => 'return checkSearchString()',class: 'search' do %>
-      <%= text_field_tag :search_name %>
-      <%= submit_tag "Search" %>
-    <% end %>
-
-  </div>
-		
-		
-	  <div id = "cart_side">	
+	<div id = "cart_side">	
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
           <%= render @cart %>
         <% end %>
       <% end %>
-      </div>
+  	</div>
 
+  	<div id="banner">
+
+	    <%= form_tag store_path,method: :get, class: 'locale' do %>
+	      <%= select_tag 'set_locale', 
+	        options_for_select(LANGUAGES, I18n.locale.to_s),
+	        onchange: 'this.form.submit()' %>
+	      <%= javascript_tag "$('.locale input').hide()" %>
+	    <% end %>
+
+  	</div>
 		
 		<%= yield :md_contents %>
   
 		<div class="container">
+			<div id = "searchbox">
+				<div id="sb-search" class="sb-search">
+					<%= form_tag search_path, :method => :get, :onsubmit => 'return checkSearchString()' do %>
+			      		<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search_name" id="search">
+						<input class="sb-search-submit" type="submit" value="">
+						<span class="sb-icon-search"></span>
+			    	<% end %>
+				</div>
+			</div>
 
 			<header>
 				<h1>Pragprog Books Online Store<span>Nice to meet you</span></h1>	
@@ -92,6 +95,7 @@
 		</div>
 		
 		<div class="md-overlay"></div><!-- the overlay element -->
+
 		<script src="/assets/js/masonry.pkgd.min.js"></script>
 		<script src="/assets/js/imagesloaded.js"></script>
 		<script src="/assets/js/classie.js"></script>
@@ -105,6 +109,11 @@
 				maxDuration : 0.7,
 				viewportFactor : 0.2
 			} );
+		</script>
+
+		<script src="/asserts/js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
 
 	</body>
