@@ -9,7 +9,8 @@
 			// this is important for IEs
 			var polyfilter_scriptpath = '/js/';
 		</script>
-		<script type="text/javascript" src="/assets/js/modernizr.custom.js"></script>
+		<!--<script type="text/javascript" src="/assets/js/modernizr.custom.js"></script>-->
+		<%= javascript_include_tag "js/modernizr.custom" %>
 		<%= stylesheet_link_tag    "application", media: "all" %>
   		<%= javascript_include_tag "application" %>
  		<%= csrf_meta_tags %>
@@ -101,13 +102,20 @@
 		
 		<div class="md-overlay"></div><!-- the overlay element -->
 
-		<script src="/assets/js/masonry.pkgd.min.js"></script>
+		<%= javascript_include_tag "js/masonry.pkgd.min" %>
+		<%= javascript_include_tag "js/imagesloaded" %>
+		<%= javascript_include_tag "js/classie" %>
+		<%= javascript_include_tag "js/AnimOnScroll" %>
+		<%= javascript_include_tag "js/modalEffects" %>
+		<%= javascript_include_tag "js/cssParser" %>
+		<%= javascript_include_tag "js/css-filters-polyfill" %>
+		<!--<script src="/assets/js/masonry.pkgd.min.js"></script>
 		<script src="/assets/js/imagesloaded.js"></script>
 		<script src="/assets/js/classie.js"></script>
 		<script src="/assets/js/AnimOnScroll.js"></script>
 		<script src="/assets/js/modalEffects.js"></script>
 		<script src="/assets/js/cssParser.js"></script>
-		<script src="/assets/js/css-filters-polyfill.js"></script>
+		<script src="/assets/js/css-filters-polyfill.js"></script>-->
 		<script>
 			new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,
@@ -116,7 +124,8 @@
 			} );
 		</script>
 
-		<script src="/asserts/js/uisearch.js"></script>
+		<!--<script src="/asserts/js/uisearch.js"></script>-->
+		<%= javascript_include_tag "js/uisearch" %>
 		<script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
