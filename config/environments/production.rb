@@ -57,7 +57,8 @@ Depot::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += [ Proc.new {|path| File.basename(path) =~ /^[^_].*\.\w+$/} ]
+  # config.assets.precompile += [ Proc.new {|path| File.basename(path) =~ /^[^_].*\.\w+$/} ]
+  config.assets.precompile += %w[js css].map {|ext| Dir[Rails.root.join("app/assets/*/*.#{ext}")] }.flatten.map {|f| f.split('/')[-1] }
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
