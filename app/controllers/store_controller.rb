@@ -11,13 +11,13 @@ class StoreController < ApplicationController
   	end
   end
   def question
-
+    @cart = current_cart
   end
   def contact
-
+    @cart = current_cart
   end
   def news
-
+    @cart = current_cart
   end
   
   def index_old
