@@ -14,18 +14,25 @@
  *= require_tree .
  */
 
-// .search
-// {
-  // float: right;
-  // margin: -0.25em 0.1em
-// }
-// 
-// 
-// .locale
-// {
-  // float: right;
-  // margin: -0.25em 0.1em
-// }
+#searchbox
+{
+  position:fixed;
+  right: 1em;
+  width:350px;
+  height:80px;
+  z-index: 2;
+}
+
+.locale
+{
+  float: right;
+  margin: 1em;
+}
+
+.container
+{
+  padding-top: 3.5em;
+}
 // #banner {
   // background: #9c9;
   // padding: 10px;
