@@ -2,6 +2,7 @@ class SearchController < ApplicationController
 	skip_before_filter :authorize
 
 	def results
+	  @cart = current_cart
 		@products = Product.find(:all,
 			:conditions => ["title like ?", "%" + params[:search_name] + "%"])
 		respond_to do |format|

@@ -68,6 +68,7 @@ en:
       products:    "Products"
       users:       "Users"
       logout:      "Logout"
+      category_edit: 'Edit Category'
 #END:layout
 
 #START:cart

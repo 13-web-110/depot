@@ -1,16 +1,20 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.comment{
-
+.comment_item{
+  width:1000px;
   .page_foot{
+    position:relative;
+    left:50em;
       margin-right: 5px;
     align:right;
     .commenter{
      font-size:9pt;
      color:#44a;
+     padding-left:2em;
    }
     .del{
+      
      a{
            font_size:8pt;
       }

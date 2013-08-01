@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .search {
+  
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
@@ -11,16 +12,23 @@
     border-bottom: 3px dotted #77d;
   }
   .entry {
+    
     overflow: auto;
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
     min-height: 100px;
-
+    padding-right:8em;
+    padding-left:8em;
+    padding-top:1em;
+    padding-bottom:1em;
+    width:94%;
+    margin-left:auto;
+    margin-right:auto;
     img {
       width: 80px;
       margin-right: 5px;
       margin-bottom: 5px;
-      position: absolute;
+      float:left;
     }
     a {
       text-decoration:none;

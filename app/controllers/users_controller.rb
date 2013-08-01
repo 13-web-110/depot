@@ -53,7 +53,7 @@ class UsersController < ApplicationController
           session[:admin_id] = @user.id
         end
         format.html { redirect_to store_url,
-          notice: "User #{@user.name} was successfully created." }
+          notice: "Welcome #{@user.name} ." }
         format.json { render json: @user,
           status: :created, location: @user }
       else
