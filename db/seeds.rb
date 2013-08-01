@@ -10,22 +10,22 @@ User.create(name: 'admin', password: 'admin', password_confirmation: 'admin')
 
 
 RootCategory.create(
-  title: 'IT', description:"dsadsadsa" , image_url:"categories/1.png"
+  title: 'IT', description:"dsadsadsa" , image_url:"categories/a1.png"
 )
 RootCategory.create(
-  title: '文学', description:"dsadsadsa" , image_url:"categories/2.png"
+  title: '文学', description:"dsadsadsa" , image_url:"categories/a2.png"
 )
 RootCategory.create(
-  title: '奇幻', description:"dsadsadsa" , image_url:"categories/3.png"
+  title: '奇幻', description:"dsadsadsa" , image_url:"categories/a3.png"
 )
 RootCategory.create(
-  title: '悬疑', description:"dsadsadsa" , image_url:"categories/4.png"
+  title: '悬疑', description:"dsadsadsa" , image_url:"categories/a4.png"
 )
 RootCategory.create(
-  title: '心理学', description:"dsadsadsa" , image_url:"categories/5.png"
+  title: '心理学', description:"dsadsadsa" , image_url:"categories/a5.png"
 )
 RootCategory.create(
-  title: '名著', description:"dsadsadsa" , image_url:"categories/6.png"
+  title: '名著', description:"dsadsadsa" , image_url:"categories/a6.png"
 )
 
 
