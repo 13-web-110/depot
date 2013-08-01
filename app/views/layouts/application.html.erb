@@ -15,31 +15,13 @@
 		<%= stylesheet_link_tag    "application", media: "all" %>
 		<%= stylesheet_link_tag    "css/component", media: "all" %>
 		<%= stylesheet_link_tag    "css/default", media: "all" %>
-
+		<%= javascript_include_tag "js/modernizr.custom" %>
+		<%= javascript_include_tag "js/modernizr.custom2" %>
   		<%= javascript_include_tag "application" %>
   		
  		<%= csrf_meta_tags %>
 	</head>
 	<body class="<%= controller.controller_name %>" >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<% if session[:user_id] %>
 	<div id = "cart_side">
 	  <div id="cart_bar" onclick="toggleCart()" ><%= t('.cart_show') %></div>
