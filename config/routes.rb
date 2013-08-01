@@ -1,10 +1,14 @@
 Depot::Application.routes.draw do
+  resources :root_categories
+
+
   get 'admin' => 'admin#index'
   get "store/index"
   get "store/question"
   get "store/news"
   get "store/contact"
   get "store/category"
+  get "store/category_show"
   get "index_old" => 'store#index_old'
   
   controller :sessions do
@@ -20,6 +24,8 @@ Depot::Application.routes.draw do
 
     resources :line_items
     resources :liked_users
+    
+    resources :root_categories
     
     get 'liked_users/cancer_like/:product_id' => 'liked_users#cancer_like'
     

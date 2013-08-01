@@ -4,7 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 		<title><%= t('.title') %></title>
+
 		<script>
 			// this is important for IEs
 			var polyfilter_scriptpath = '/js/';
@@ -13,11 +15,29 @@
 		<%= stylesheet_link_tag    "application", media: "all" %>
 		<%= stylesheet_link_tag    "css/component", media: "all" %>
 		<%= stylesheet_link_tag    "css/default", media: "all" %>
-		<%= javascript_include_tag "js/modernizr.custom" %>
+
   		<%= javascript_include_tag "application" %>
+  		
  		<%= csrf_meta_tags %>
 	</head>
 	<body class="<%= controller.controller_name %>" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	<% if session[:user_id] %>
@@ -52,10 +72,12 @@
       		<% end %>
 
   	</div>
+  	
+
 		
 		<%= yield :md_contents %>
   
-		<div class="container">
+		<div class="container demo-1">
 			<div id = "searchbox">
 				<div id="sb-search" class="sb-search">
 					<%= form_tag search_path, :method => :get, :onsubmit => 'return checkSearchString()' do %>
@@ -81,20 +103,20 @@
      				<%= link_to t('.orders'),   orders_path   %>
       				<%= link_to t('.products'), products_path %>
       				<%= link_to t('.users'),    users_path    %>
+      				<%= link_to 'category_edit',root_categories_path %>
     				<% end %>
     	
    
 			</nav>
 				 
-    
 			</header>
+			
+			<%= yield :index_category%>
+			
 			<div class="main clearfix">
 				<div class="column" style="alignment-baseline: central">
-					<div style="text-align:center">
-						
-						
-						
-						
+					<!-- It's convenient to design news, questions and cotact pages,so define this style. -->
+					<div style="text-align:center">	
 					<%= yield %>
 					</div>
 					<ul class="grid effect-7" id="grid">
@@ -113,6 +135,7 @@
 		<%= javascript_include_tag "js/modalEffects" %>
 		<%= javascript_include_tag "js/cssParser" %>
 		<%= javascript_include_tag "js/css-filters-polyfill" %>
+		<%= javascript_include_tag "js/toucheffects" %>
 		<!--<script src="/assets/js/masonry.pkgd.min.js"></script>
 		<script src="/assets/js/imagesloaded.js"></script>
 		<script src="/assets/js/classie.js"></script>
