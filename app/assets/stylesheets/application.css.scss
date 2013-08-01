@@ -34,6 +34,7 @@
   }
 
   form {
+
 label {
 
      width: 30em;
@@ -47,11 +48,12 @@ label {
    
     select, textarea, input {
       margin-left: 1em;
+      margin-top: 2em;
     }
 
     .submit {
-      margin-left: 5em;
-    }
+      margin-left: 5emm;    
+      }
     br {
       display: none
     }
