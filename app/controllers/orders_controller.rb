@@ -1,12 +1,13 @@
 #by xiao xue
 class OrdersController < ApplicationController
     skip_before_filter :authorize, only: [:new, :create]
+
   # GET /orders
   # GET /orders.json
   def index
     @orders = Order.paginate page: params[:page], order: 'created_at desc',
       per_page: 10
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
@@ -17,7 +18,7 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @order = Order.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @order }
@@ -43,6 +44,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/1/edit
   def edit
+    @cart = current_cart
     @order = Order.find(params[:id])
   end
 

@@ -18,64 +18,20 @@
   float: left;
 }
 
-// .store {
-  // h1 {
-    // margin: 0;
-    // padding-bottom: 0.5em;
-    // font:  150% sans-serif;
-    // color: #226;
-    // border-bottom: 3px dotted #77d;
-  // }
-  // .entry {
-    // overflow: auto;
-    // margin-top: 1em;
-    // border-bottom: 1px dotted #77d;
-    // min-height: 100px;
-// 
-    // img {
-      // width: 80px;
-      // margin-right: 5px;
-      // margin-bottom: 5px;
-      // position: absolute;
-    // }
-    // a {
-      // text-decoration:none;
-    // }
-    // h3 {
-      // font-size: 120%;
-      // font-family: sans-serif;
-      // margin-left: 100px;
-      // margin-top: 0;
-      // margin-bottom: 2px;
-      // color: #227;
-    // }
-// 
-// 
-    // p, div.price_line {
-      // margin-left: 100px;
-      // margin-top: 0.5em; 
-      // margin-bottom: 0.8em; 
-// 
-// 
-      // form, div,input {
-        // display: inline;
-      // }
-// 
-    // }
-    // .comment{
-      // a{
-          // color: #44a;
-          // font-weight: bold;
-      // }
-//      
-    // }
-// 
-    // .price {
-      // color: #44a;
-      // font-weight: bold;
-      // margin-right: 3em;
-    // }
-// 
-    // }
-  // }
-// }
+.md-content-detail img
+{
+  float: left;
+  height: 170px;
+  width: 120px;
+}
+
+#details
+{
+  overflow: hidden;
+}
+
+#details div
+{
+  padding-left: 130px;
+}
+

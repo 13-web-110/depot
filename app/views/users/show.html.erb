@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t('.name') %>:</b>
   <%= @user.name %>
 </p>
 
 <p>
-  <b>Password digest:</b>
+  <b><%= t('.passworddigest') %>:</b>
   <%= @user.password_digest %>
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to t('.edit'), edit_user_path(@user) %> |
+<%= link_to t('.back'), users_path %>

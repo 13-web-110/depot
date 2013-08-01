@@ -27,7 +27,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_difference('User.count') do
       post :create, user: @input_attributes
     end
-    assert_redirected_to users_path
+    assert_redirected_to store_path
   end
 
   test "should show user" do

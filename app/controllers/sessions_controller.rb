@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       
       if user.name == 'admin'
         session[:admin_id] = user.id
-        redirect_to admin_url
+        redirect_to store_url
       else
         redirect_to store_url
       end

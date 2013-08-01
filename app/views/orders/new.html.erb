@@ -1,7 +1,23 @@
+<h2><%= t('.title') %></h2>
 
+<table id="cart_details">
+  <% for line_item in @cart.line_items do %>
+	<tr>
+	  <td><%= line_item.quantity %>&times;</td>
+	  <td><%= line_item.product.title %></td>
+	  <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
+	</tr>
+  <% end %>
+  <tr class="total_line">
+    <td colspan="2"><%= t('.total') %></td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
+<br>
 <div class="depot_form">
   <fieldset>
     <legend><%= t('.legend') %></legend>
     <%= render 'form' %>
   </fieldset>
+  <%= link_to t('.back'), store_path %>
 </div>

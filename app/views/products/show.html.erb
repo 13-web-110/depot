@@ -16,22 +16,19 @@
     </div>
   </div>
 <hr/ >
-<h3>Comments : </h3>
+<h3><%= t('.comments') %>:</h3>
 <%= render @product.comments %>
-  
+
 <hr/ >
-<h3>Add a comment:</h3>
+<h3><%= t('.addcomment') %>:</h3>
 <%= render "comments/form"%>
 
 
 
 <% if session[:user_id] %>
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to t('.edit'), edit_product_path(@product) %> |
+<%= link_to t('.back'), products_path %>
 <% end %>
-
-
-<%= link_to 'Home', store_path %>
 
 
 

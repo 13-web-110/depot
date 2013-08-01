@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.order(:name)
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
@@ -36,6 +36,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @cart = current_cart
     @user = User.find(params[:id])
   end
 
@@ -51,7 +52,7 @@ class UsersController < ApplicationController
         if @user.name == 'admin'
           session[:admin_id] = @user.id
         end
-        format.html { redirect_to users_url,
+        format.html { redirect_to store_url,
           notice: "User #{@user.name} was successfully created." }
         format.json { render json: @user,
           status: :created, location: @user }

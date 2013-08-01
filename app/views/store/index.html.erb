@@ -1,3 +1,7 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <% content_for :md_contents do%> 
 
 <% @products.each_with_index do |product,index| %>
@@ -6,12 +10,16 @@
     
     	<h3><%= product.title %></h3>
 		<div class="md-content-detail">
-   			<div><%= sanitize(product.description) %></div>
-   			<%= number_to_currency(product.price) %>
-   		
+        <div id="details">
+          <%= image_tag(product.image_url) %>
+   			  <div><%= sanitize(product.description) %></div>
+        </div>
+        <div>
+   			  <%= number_to_currency(product.price) %>
+        </div>
 		</div>
 		<div >
-    	<button class="md-close">Close</button>
+    	<button class="md-close"><%= t('.close') %></button>
     	</div>
     </div>
   </div>
@@ -25,10 +33,10 @@
 				<div class="price_line">
           <div>
       			<span class="price"><%= number_to_currency(product.price) %></span>
-            <span class="add_cart"><%= link_to 'add to cart', line_items_path(product_id: product), :method => :post,remote:true %></span>
+            <span class="add_cart"><%= link_to t('.add_html'), line_items_path(product_id: product), :method => :post,remote:true %></span>
           </div>
           <div>
-      			<span class="comment"><%= link_to 'comment' +  "  (" + product.comments.count.to_s + ")"  , product %></span>
+      			<span class="comment"><%= link_to t('.comment') +  "  (" + product.comments.count.to_s + ")"  , product %></span>
             <span id="liked_user_<%= product.id %>" class="liked">
               <% if session[:user_id] == nil || !product.liked_users.exists?(:user_id => session[:user_id]) %>
                   <%= link_to t('.like') + "(" +  product.liked_users.count.to_s + ")" , liked_users_path(product_id: product), :method => :post ,remote:true %>
