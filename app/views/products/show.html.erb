@@ -1,34 +1,37 @@
   <% if notice %>
   <p id="notice"><%= notice %></p>
   <% end %>
-
+<div id="show_main">
   <div class="entry">
-    <%= image_tag(@product.image_url) %>
-    <h3><%= @product.title %></h3>
-    <p><%= sanitize(@product.description) %></p>
-    <div class="price_line">
-
-      <span class="price"><%= number_to_currency(@product.price) %></span>
-
-      <%= button_to t('.add_html'), line_items_path(product_id: @product),
-      remote:true %>
-
+    <div id="face">
+      <%= image_tag(@product.image_url) %>
     </div>
-  </div>
-<hr/ >
-<h3><%= t('.comments') %>:</h3>
-<%= render @product.comments %>
+    <div id="info">
+      <h3><%= @product.title %></h3>
+      <p><%= sanitize(@product.description) %></p>
+      <div class="price_line">
 
-<hr/ >
-<h3><%= t('.addcomment') %>:</h3>
-<%= render "comments/form"%>
+        <span class="price"><%= number_to_currency(@product.price) %></span>
 
+        <%= button_to t('.add_html'), line_items_path(product_id: @product),
+        remote:true %>
 
+      </div>
+    </div>
+</div>
 
-<% if session[:user_id] %>
-<%= link_to t('.edit'), edit_product_path(@product) %> |
-<%= link_to t('.back'), products_path %>
-<% end %>
+<div id="comment">
+  <hr/ >
+  <h3><%= t('.comments') %>:</h3>
+  <%= render @product.comments %>
 
+  <hr/ >
+  <h3><%= t('.addcomment') %>:</h3>
+  <%= render "comments/form"%>
 
-
+  <% if session[:user_id] %>
+  <%= link_to t('.edit'), edit_product_path(@product) %> |
+  <%= link_to t('.back'), products_path %>
+  <% end %>
+</div>
+</div>
