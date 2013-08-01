@@ -106,19 +106,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
   background: #2c3f52;
   color: #ed4e6e;
 }
 
 .grid_touch figcaption h3 {
   margin: 0;
-  padding: 0;
+  
   color: #fff;
+  font-size: 2em;
 }
 
 .grid_touch figcaption span:before {
-  content: 'by ';
+  content: '';
 }
 
 .grid_touch figcaption a {
@@ -156,11 +159,13 @@
 }
 
 .cs-style-1 figcaption h3 {
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .cs-style-1 figcaption span {
   display: block;
+
 }
 
 .cs-style-1 figcaption a {
