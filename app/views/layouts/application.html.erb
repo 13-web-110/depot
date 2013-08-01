@@ -17,8 +17,8 @@
 		<%= stylesheet_link_tag    "css/default", media: "all" %>
 
 		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "js/modernizr.custom" %>
 		
-		<%= javascript_include_tag "js/modernizr.custom2" %>
   		
   		
  		<%= csrf_meta_tags %>
@@ -94,7 +94,7 @@
 			</nav>
 				 
 			</header>
-			<%= javascript_include_tag "js/toucheffects" %>
+			
 			<%= yield :index_category%>
 			
 			<div class="main clearfix">
@@ -112,6 +112,7 @@
 		
 		<div class="md-overlay"></div><!-- the overlay element -->
 
+		<%= javascript_include_tag "js/toucheffects" %>
 		<%= javascript_include_tag "js/masonry.pkgd.min" %>
 		<%= javascript_include_tag "js/imagesloaded" %>
 		<%= javascript_include_tag "js/classie" %>
