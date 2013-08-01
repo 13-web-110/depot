@@ -15,9 +15,11 @@
 		<%= stylesheet_link_tag    "application", media: "all" %>
 		<%= stylesheet_link_tag    "css/component", media: "all" %>
 		<%= stylesheet_link_tag    "css/default", media: "all" %>
+		
+		<%= javascript_include_tag "application" %>
 		<%= javascript_include_tag "js/modernizr.custom" %>
 		<%= javascript_include_tag "js/modernizr.custom2" %>
-  		<%= javascript_include_tag "application" %>
+  		
   		
  		<%= csrf_meta_tags %>
 	</head>
@@ -92,7 +94,7 @@
 			</nav>
 				 
 			</header>
-			
+			<%= javascript_include_tag "js/toucheffects" %>
 			<%= yield :index_category%>
 			
 			<div class="main clearfix">
@@ -117,7 +119,7 @@
 		<%= javascript_include_tag "js/modalEffects" %>
 		<%= javascript_include_tag "js/cssParser" %>
 		<%= javascript_include_tag "js/css-filters-polyfill" %>
-		<%= javascript_include_tag "js/toucheffects" %>
+		
 		<!--<script src="/assets/js/masonry.pkgd.min.js"></script>
 		<script src="/assets/js/imagesloaded.js"></script>
 		<script src="/assets/js/classie.js"></script>
