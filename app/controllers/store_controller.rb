@@ -19,6 +19,10 @@ class StoreController < ApplicationController
   def news
     @cart = current_cart
   end
+  def category
+    @cart = current_cart
+    @products = Product.order(:library_type)
+  end
   
   def index_old
     if params[:set_locale]
