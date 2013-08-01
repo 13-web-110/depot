@@ -13,38 +13,38 @@ RootCategory.create(
   title: 'IT', description:"程序员必备书籍, IT 发展日新月异, IT 书籍也异彩纷呈,有薄的,有厚的, 
                                                                                               一本好的书籍， 不仅教授正确的知识和技能， 更重要的是潜移默化地给予一个更好的思维方法和视角。 
                                                                                               应该尽可能选择比较知名的书籍." , 
-       image_url:"categories/1.png"
+       image_url:"categories/a1.png"
 )
 RootCategory.create(
   title: '文学', description:"文学是指以语言文字为工具形象化地反映客观现实、表现作家心灵世界的艺术，
   包括诗歌、散文、小说、剧本、寓言、童话等，是文化的重要表现形式，以不同的形式（称作体裁）表现
-  内心情感和再现一定时期和一定地域的社会生活。" , image_url:"categories/2.png"
+  内心情感和再现一定时期和一定地域的社会生活。" , image_url:"categories/a2.png"
 )
 RootCategory.create(
   title: '奇幻', description:"在文学中，奇幻小说这种小说形式包括了长篇小说和短篇小说。
                                                                                                  形式上包括角色扮演形式（类似主角历险记），史诗叙述形式（对一段历史的描述）等。
                                                                                                  奇幻小说的故事或者发生在与现实世界规律相左的“第二世界”中，或者是在现实地球中加入超自
                                                                                                  然因素。" , 
-        image_url:"categories/3.png"
+        image_url:"categories/a3.png"
 )
 RootCategory.create(
   title: '悬疑', description:"悬疑小说是以一个悬念贯穿始终并且解开的小说，其内容和题材相对自由广泛，
   当然，从更大的概念来说，恐怖小说也必然有悬念，
-  也可以被认作是悬疑小说的一个分支。但是，无论悬疑小说还是恐怖小说，跟鬼故事是完全不同的." , image_url:"categories/4.png"
+  也可以被认作是悬疑小说的一个分支。但是，无论悬疑小说还是恐怖小说，跟鬼故事是完全不同的." , image_url:"categories/a4.png"
 )
 RootCategory.create(
   title: '心理学', description:"心理学是一门涵盖多种专业领域的科学，但就其根本而言，心理学是一种研
                                                                                              究人类行为和心理过程的科学。既是一门理论学科，也是应用学科。包括理论心理学与应用心
                                                                                              理学两大领域。
                                                                                              " , 
-                  image_url:"categories/5.png"
+                  image_url:"categories/a5.png"
 )
 RootCategory.create(
   title: '名著', description:"名著一般都拥有最广泛的读者。它们不是只风行一二年，而是经久不变的畅销书。
                                                                                                  名著通俗易懂，不卖弄学问。
                                                                                                  无论是关于哲学或者科学，历史或者诗歌，它们所论述的是关于人类共同感兴趣的题材，
                                                                                                  而不是学究式的空谈。" , 
-       image_url:"categories/6.png"
+       image_url:"categories/a6.png"
 )
 
 
