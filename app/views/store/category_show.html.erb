@@ -1,0 +1,44 @@
+<% content_for :index_category do %>
+<div class="index_category">
+<% @products.each_with_index  do |product,index| %>
+	<div><h1><%= product.library_type %></h1></div>
+	<hr/>
+  <div class="entry">
+  	
+  	<h3><%= product.title %></h3>
+  	<div class="product">
+  		
+    <div class="product_img"><%= image_tag(product.image_url) %></div>
+	
+    <div class="description">
+    	<p><%= sanitize(product.description) %></p>
+	
+    
+    
+    
+    
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(product.price) %></span>
+
+      <span class="comment"><%= link_to 'comment' +  "  (" + product.comments.count.to_s + ")"  , product %></span>
+      
+      <span class="add_cart"><%= link_to 'add to cart', line_items_path(product_id: product), method: :post,remote:true %></span>
+      
+      
+      <span id="liked_user_<%= product.id %>">
+    	<% if session[:user_id] == nil || !product.liked_users.exists?(:user_id => session[:user_id]) %>
+        	<%= link_to 'like' +  "  (" +  product.liked_users.count.to_s + ")" , liked_users_path(product_id: product), :method => :post ,remote:true %>
+   	 	<% else %>
+     	 	<%= link_to 'cancer_like' +  "  (" +  product.liked_users.count.to_s + ")" , :controller => 'liked_users', :action => 'cancer_like', :product_id => product.id ,remote:true %>
+   		<% end %>
+    </span>
+    </div>
+ 
+    </div>
+    </div>
+     
+  </div>
+  
+<% end %>
+</div>
+<% end %>

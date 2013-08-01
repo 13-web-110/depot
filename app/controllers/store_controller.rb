@@ -22,6 +22,7 @@ class StoreController < ApplicationController
   def category
     @cart = current_cart
     @products = Product.order(:library_type)
+    @categories = RootCategory.order(:title)
   end
   
   def index_old
@@ -32,6 +33,12 @@ class StoreController < ApplicationController
       @cart = current_cart
        session[:cart_mode] = nil
     end
+  end
+  
+  def category_show
+    @products = Product.find(:all,
+      :conditions => ["library_type = ?", params[:category_type]])
+    @cart = current_cart
   end
 
 end

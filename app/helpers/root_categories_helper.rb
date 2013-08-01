@@ -1,0 +1,2 @@
+module RootCategoriesHelper
+end

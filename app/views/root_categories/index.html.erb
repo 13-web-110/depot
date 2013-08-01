@@ -1,0 +1,27 @@
+<h1>Listing root_categories</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @root_categories.each do |root_category| %>
+  <tr>
+    <td><%= root_category.title %></td>
+    <td><%= root_category.description %></td>
+    <td><%= root_category.image_url %></td>
+    <td><%= link_to 'Show', root_category %></td>
+    <td><%= link_to 'Edit', edit_root_category_path(root_category) %></td>
+    <td><%= link_to 'Destroy', root_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Root category', new_root_category_path %>
