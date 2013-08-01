@@ -21,6 +21,42 @@
 
 }
 
+.depot_form 
+{
+  fieldset {
+    background: #00FFF0;
+    legend {
+      color: #FFDCEE;
+      background: orange;
+      font-family: sans-serif;
+      
+    }
+  }
+
+  form {
+label {
+
+     width: 30em;
+      float: center; 
+      text-align: right;
+      padding-top: 0.5em;
+      margin-right: 53em;
+      margin-buttom: 10em;
+      display: block;
+    }                    
+   
+    select, textarea, input {
+      margin-left: 1em;
+    }
+
+    .submit {
+      margin-left: 5em;
+    }
+    br {
+      display: none
+    }
+  }
+}
 
 ///now we need not this spare part,we can make it as an annotation
 
