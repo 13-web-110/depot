@@ -5,11 +5,6 @@ Comment.delete_all
 Order.delete_all
 Cart.delete_all
 User.delete_all
-<<<<<<< HEAD
-
-User.create(name: 'admin', password: 'admin', password_confirmation: 'admin')
-
-=======
 RootCategory.delete_all
 User.create(name: 'admin', password: 'admin', password_confirmation: 'admin')
 
@@ -35,7 +30,6 @@ RootCategory.create(
 
 
 
->>>>>>> web/master
 Product.create(title: 'CoffeeScript',
   description: 
     %{<p>
