@@ -25,6 +25,8 @@
 
 .locale
 {
+  font-size: 1em;
+  height: 25px;
   float: right;
   margin: 1em;
 }
@@ -32,7 +34,47 @@
 .container
 {
   padding-top: 3.5em;
+}
 
+.depot_form {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  fieldset {
+    // background: #efe;
+    legend {
+      // color: #dfd;
+      // background: #141;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
+  }
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    // #order_pay_type
+    // {
+    //   margin-left: -1.2em;
+    // }
+
+    .submit {
+      margin-left: 4em;
+    }
+    br {
+      display: none
+    }
+  }
 }
 
 
