@@ -70,6 +70,7 @@ zh:
       products:    "书目"
       users:       "用户"
       logout:      "注销"
+      category_edit: "编辑 分类"
 #END:layout
 
 #START:cart
