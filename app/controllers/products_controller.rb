@@ -116,7 +116,7 @@ class ProductsController < ApplicationController
   def uploadfile(file,filename)
     if !file.original_filename.empty?
       @filename = filename
-      File.open("#{Rails.root}/public/assets/images/#{@filename}", "wb") do |f|
+      File.open("#{Rails.root}/app/assets/images/#{@filename}", "wb") do |f|
         f.write(file.read)
       end
       return @filename
@@ -132,7 +132,7 @@ class ProductsController < ApplicationController
   
   def delete_file(filename)
     @filename = filename
-    file_path = "#{Rails.root}/public/assets/images/#{@filename}"
+    file_path = "#{Rails.root}/app/assets/images/#{@filename}"
     if File.exist?(file_path)
       File.delete(file_path)
     end
