@@ -16,30 +16,12 @@
 		<%= stylesheet_link_tag    "css/component", media: "all" %>
 		<%= stylesheet_link_tag    "css/default", media: "all" %>
 
-  		<%= javascript_include_tag "application" %>
-  		
+		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "js/modernizr.custom" %>
+		<%= javascript_include_tag "js/modernizr.custom2" %>
  		<%= csrf_meta_tags %>
 	</head>
 	<body class="<%= controller.controller_name %>" >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<% if session[:user_id] %>
 	<div id = "cart_side">
 	  <div id="cart_bar" onclick="toggleCart()" ><%= t('.cart_show') %></div>
@@ -128,6 +110,7 @@
 		
 		<div class="md-overlay"></div><!-- the overlay element -->
 
+		<%= javascript_include_tag "js/toucheffects" %>
 		<%= javascript_include_tag "js/masonry.pkgd.min" %>
 		<%= javascript_include_tag "js/imagesloaded" %>
 		<%= javascript_include_tag "js/classie" %>
@@ -135,7 +118,7 @@
 		<%= javascript_include_tag "js/modalEffects" %>
 		<%= javascript_include_tag "js/cssParser" %>
 		<%= javascript_include_tag "js/css-filters-polyfill" %>
-		<%= javascript_include_tag "js/toucheffects" %>
+		
 		<!--<script src="/assets/js/masonry.pkgd.min.js"></script>
 		<script src="/assets/js/imagesloaded.js"></script>
 		<script src="/assets/js/classie.js"></script>
