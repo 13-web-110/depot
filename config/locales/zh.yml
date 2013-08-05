@@ -156,7 +156,7 @@ zh:
     form:
       title:        "书名"
       description:  "简介"
-      image_url:    "封面路径"
+      image_url:    "上传封面"
       price:        "价格"
       library_type: "分类"
       submit:       "更新"
