@@ -153,7 +153,7 @@ en:
     form:
       title:        "Title"
       description:  "Description"
-      image_url:    "Image_url"
+      image_url:    "Upload Face"
       price:        "Price"
       library_type: "Library Type"
       submit:       "Update"

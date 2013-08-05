@@ -44,9 +44,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
+    @product.image_url = get_file_name(params[:product][:image_url])
 
     respond_to do |format|
       if @product.save
+        uploadfile(params[:product][:image_url],@product.image_url)
         format.html { redirect_to @product,
           notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created,
@@ -63,9 +65,12 @@ class ProductsController < ApplicationController
   # PUT /products/1.json
   def update
     @product = Product.find(params[:id])
-
+    old_filename = @product.image_url
+    filename = get_file_name(params[:product][:image_url])
     respond_to do |format|
-      if @product.update_attributes(params[:product])
+      if @product.update_attributes(:title => params[:product][:title], :description => params[:product][:description],:price => params[:product][:price],:library_type => params[:product][:library_type],:image_url => filename)
+        delete_file(old_filename)
+        uploadfile(params[:product][:image_url],@product.image_url)
         format.html { redirect_to @product,
           notice: 'Product was successfully updated.' }
         format.json { head :no_content }
@@ -81,6 +86,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product = Product.find(params[:id])
+    delete_file(@product.image_url)
     @product.destroy
 
     respond_to do |format|
@@ -88,7 +94,7 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
-       
+  
   def who_bought
     @product = Product.find(params[:id])
     respond_to do |format|
@@ -96,5 +102,40 @@ class ProductsController < ApplicationController
     end
   end
   
+  def get_file_name(file)
+    if file == nil
+      return nil
+    end
+
+    if !file.original_filename.empty?
+      @filename = getFileName(file.original_filename)
+    end
+    return @filename
+  end
+
+  def uploadfile(file,filename)
+    if !file.original_filename.empty?
+      @filename = filename
+      File.open("#{Rails.root}/app/assets/images/#{@filename}", "wb") do |f|
+        f.write(file.read)
+      end
+      return @filename
+    end
+  end
+
+  def getFileName(filename)
+     if !filename.nil?
+       require "uuidtools"
+       UUIDTools::UUID.random_create.to_s + filename
+     end
+  end
   
+  def delete_file(filename)
+    @filename = filename
+    file_path = "#{Rails.root}/app/assets/images/#{@filename}"
+    if File.exist?(file_path)
+      File.delete(file_path)
+    end
+  end
+
 end
