@@ -4,6 +4,7 @@ I18n.default_locale = :en
 #cherish
 
 LANGUAGES = [
-	['English','en'],
-	['简体中文'.html_safe,'zh']
+	['English',            'en'],
+	['简体中文'.html_safe, 'zh'],
+	['ئۇيغۇرچە'.html_safe,   'ug']
 ]

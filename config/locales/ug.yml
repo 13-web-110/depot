@@ -1,0 +1,221 @@
+﻿# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+ug:
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+#END:currency
+
+  activerecord:
+#END:errors
+#END:model
+#START:errors
+    models:
+      order:       "زاكاس قىلىش"
+    attributes:
+      order:
+        address:   "ئادىرىس"
+        name:       "ئىسىم"
+        email:      "ئېلخەت"
+        pay_type:   "پۇل تۆلەش ۋاستىلىرى"
+    errors:
+      messages:
+        inclusion:  "بۇ ئورۇندا بولماسلىقى كىرەك"
+        blank:      "قۇرۇق قالماسلىقى كىرەك"
+  errors:
+    template:
+      body:        "خاتالىقلار:"
+      header:
+        one:       "1 خاتالىق تۈپەيلى %{model} ساقلاشقا بولمىدى"
+        other:     "%{count} خاتالىقلار تۈپەيلىدىن %{model} ساقلاشقا بولمىدى"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      cart_show:   " كۆرۈش/يۇشۇرۇش"
+      title:       " كىتاب بازىرىمىزغا خۇش كەپسىز "
+      welcome:     "مەرھەمەت "
+      home:        "باش بەت"
+      questions:   "سۇئاللار"
+      news:        "خەۋەر قانىلى"
+      contact:     "ئالاقىلىشىمەن"
+      sing_up:     "تىزىملىتىش"
+      sing_in:     "كىرىش"
+      category:    "تۈرلەر"
+      orders:      "زاكاسلانمىلار"
+      products:    "زاكاسلانمىلار"
+      users:       "خېرىدار"
+      logout:      "چېكىنىش"
+      category_edit: 'تۈر تەھرىرلەش'
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "مال ھارۋىڭىز"
+      total:     "جەمىئي"
+      empty:       "ھارۋىنى قۇرۇغداش"
+      checkout:    "ھىسابات"
+      update:     "يىڭىلاش"
+#END:cart
+
+#START:main
+  store:
+    index:
+      welcome:     "قارشى ئالىمىز"
+      title_html:  "كىتاب ئۇچۇرلىرى"
+      add_html:    "مال ھارۋامغا سالىمەن"
+      comment:     "باھا بىرىمەن"
+      close:       "ئېتىش"
+      Like:        "ياخشىكەن"
+#END:main
+  search:
+      results:
+        add_html:    "مال ھارۋامغا سالىمەن"
+#START:checkout
+  orders:
+    index:
+      title:        "زاكاسلانمىلار"
+      name:         "ئىسىمى"
+      address:      "ئادىرسى"
+      email:        "ئىلخەت"
+      paytype:      "پۇل تۆلەش شەكلى"
+      show:         "تەپسلاتى"
+      edit:         "تەرمىلەش"
+      destroy:      "يۇيۇش"
+      sure:         "راستىنلا يۇيامسىز؟"
+    show:
+      name:             "ئىسىم"
+      address:          "ئادىرسىڭىز"
+      email:            "ئىلخەت"
+      paytype:          "پۇل تۆلەش شەكلى"
+      edit:             "تەرمىلەش"
+      back:             "قايتىش"
+    edit:  
+      title:            "زاكاس تالۇنىنى تەرمىلەش"
+      show:             "تەپسىلاتى"
+      back:             "قايتىش"
+    new:
+      title:             "زاكاسلانمىڭىز"
+      total:            "جەمىئي"
+      legend:           "ئۇچۇرلىرىڭىزنى كىرگۈزۈڭ"
+      back:             "قايتىش"
+    form:
+      name:             "ئىسىم"
+      address_html:     "ئادىرىس"
+      email:            "ئېلخەت"
+      pay_type:         "پۇل تۆلەش شەكلى"
+      pay_prompt_html:  "پۇل تۆلەش شەكلىنى تاللاڭ"
+      submit:           "تۆلەش"
+#END:checkout
+  products:
+    index:
+      title:            "كىتابلىرىمىز"
+      show:             "تەپسىلاتى"
+      edit:             "تەرمىلەش"
+      destroy:          "يۇيۇش"
+      sure:             "راستىلا  يۇيامسىز؟"
+      new:              "يىڭى كىتاب قېتىش"
+    new:
+      title:            "يىڭى كىتاب قېتىش"
+      back:             "قايتىش"
+    show:
+      edit:             "تەرمىلەش"
+      back:             "قايتىش"
+      add_html:         "باھا ئۇلانمىسىغا قېتىش"
+      comments:         "باھا"
+      addcomment:       "باھا يازىمەن"
+    edit:
+      title:            "كىتاب ئۇچۇرلىرىنى تەرمىلەش"
+      show:             "تەپسىلاتى"
+      back:             "قايتىش"
+    form:
+      title:            "كىتاب ئسمى"
+      description:      "چۈشەندۈرلىشى"
+      image_url:        "مۇقاۋا يوللانمىسى"
+      price:            "باھاسى"
+      library_type:     "تۈرلەر"
+      submit:           "يىڭىلاش"
+      
+  comments:
+    form:
+      comment_body:     "ئىنكاس:"
+      comment:          "يوللاش"
+
+  sessions:
+    new:
+      legend:           "كىرىڭ"
+      name:             "ئابونت ئىسمى"
+      password:         "شىفىر"
+      login:            "كىرىش"
+      back:             "قايتىش"
+      logged_out:      "چېكىندىڭىز"
+  users:
+    index:
+      title:            "ئابونىتلار تىزىملىكى"
+      name:             "ئىسمى"
+      show:             "تەپسىلاتى"
+      edit:             "تەھرىرلەش"
+      destroy:          "يۇيۇش"
+      sure:             "راستىنلا يۇيامسىز؟"
+    show:
+       name:             "ئىسمى"
+       passworddigest:   "ئاچقۇ"
+       edit:             "تەھرىرلەش"
+       back:             "قايتىش"
+    edit:
+      title:            "ئابونىت ئۇچۇرىنى تەھرىرلەش"      
+      show:             "تەپسىلاتى"
+      back:             "قايتىش"
+    new:
+       new_title:        "يىڭى ئابونىت"
+       back:             "قايتىش"
+    form:
+      legend:           "تىزىملىتىش ئۇچۇررى"
+      name:             "ئىسىم"
+      password:         "پارول"
+      confirm:          "پارولنى مۇقىملاش"
+      regist:           "تىزىملىتىش"      
+
+#START:flash
+  logout:          "چېكىندىڭىز"
+  thanks:          "مېلىمىزنى زاكاس قىلغىنىڭىزغا رەھمەت"
+#END:flash
+
