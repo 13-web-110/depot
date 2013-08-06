@@ -44,10 +44,12 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-    @product.image_url = get_file_name(params[:product][:image_url])
+    @product.image_url = get_file_name(params[:product][:image_url],@product.id)
 
     respond_to do |format|
       if @product.save
+        new_filename = get_file_name(params[:product][:image_url],@product.id)
+        @product.update_attributes(:image_url => new_filename)
         uploadfile(params[:product][:image_url],@product.image_url)
         format.html { redirect_to @product,
           notice: 'Product was successfully created.' }
@@ -66,14 +68,26 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     old_filename = @product.image_url
-    filename = get_file_name(params[:product][:image_url])
+    filename = get_file_name(params[:product][:image_url],@product.id)
     respond_to do |format|
-      if @product.update_attributes(:title => params[:product][:title], :description => params[:product][:description],:price => params[:product][:price],:library_type => params[:product][:library_type],:image_url => filename)
-        delete_file(old_filename)
-        uploadfile(params[:product][:image_url],@product.image_url)
-        format.html { redirect_to @product,
-          notice: 'Product was successfully updated.' }
-        format.json { head :no_content }
+      if @product.update_attributes(:title => params[:product][:title], :description => params[:product][:description],:price => params[:product][:price],:library_type => params[:product][:library_type])
+        if params[:product][:image_url] == nil
+          format.html { redirect_to @product,
+            notice: 'Product was successfully updated.' }
+          format.json { head :no_content }
+        else
+          if @product.update_attributes(:image_url => filename) 
+            delete_file(old_filename)
+            uploadfile(params[:product][:image_url],@product.image_url)
+            format.html { redirect_to @product,
+              notice: 'Product was successfully updated.' }
+            format.json { head :no_content }
+          else
+            format.html { render action: "edit" }
+            format.json { render json: @product.errors,
+              status: :unprocessable_entity }
+          end
+        end
       else
         format.html { render action: "edit" }
         format.json { render json: @product.errors,
@@ -102,13 +116,13 @@ class ProductsController < ApplicationController
     end
   end
   
-  def get_file_name(file)
+  def get_file_name(file,id)
     if file == nil
       return nil
     end
 
     if !file.original_filename.empty?
-      @filename = getFileName(file.original_filename)
+      @filename = getFileName(file.original_filename,id)
     end
     return @filename
   end
@@ -123,10 +137,11 @@ class ProductsController < ApplicationController
     end
   end
 
-  def getFileName(filename)
+  def getFileName(filename,id)
      if !filename.nil?
-       require "uuidtools"
-       UUIDTools::UUID.random_create.to_s + filename
+       # require "uuidtools"
+       # UUIDTools::UUID.random_create.to_s + filename
+       "productid" + id.to_s + "filename" + filename
      end
   end
   
