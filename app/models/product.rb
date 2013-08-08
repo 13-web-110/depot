@@ -1,11 +1,11 @@
 #by xiao xue
 class Product < ActiveRecord::Base
-  has_many :line_items
+  has_many :line_items, :dependent => :destroy
   has_many :orders, through: :line_items
   has_many :comments, :dependent => :destroy
   has_many :liked_users, :dependent => :destroy
 
-  before_destroy :ensure_not_referenced_by_any_line_item
+  # before_destroy :ensure_not_referenced_by_any_line_item
 
   attr_accessible :description, :image_url, :price, :title ,:library_type, :liked_user
   validates :title, :description, :image_url, presence: true
