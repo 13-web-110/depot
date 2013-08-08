@@ -31,7 +31,7 @@
   <h3><%= t('.addcomment') %>:</h3>
   <%= render "comments/form"%>
 
-  <% if session[:user_id] %>
+  <% if session[:admin_id] %>
   <%= link_to t('.edit'), edit_product_path(@product) %> |
   <%= link_to t('.back'), products_path %>
   <% end %>
