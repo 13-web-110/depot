@@ -86,6 +86,13 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user = User.find(params[:id])
+
+    if @user.id == session[:user_id]
+      flash[:notice] = "Can't delete your self"
+      redirect_to users_url
+      return
+    end
+
     begin
       @user.destroy
       flash[:notice] = "User #{@user.name} deleted"
